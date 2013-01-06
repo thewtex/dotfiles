@@ -1,0 +1,76 @@
+!
+! meshtv resources
+!
+meshtv*fontList: -adobe-times-bold-r-normal-*-14-*-*-*-*-*-*-*
+meshtv*errorErrorLabel.fontList: -adobe-times-bold-r-normal-*-24-*-*-*-*-*-*-*
+meshtv**creditsQuoteLabel.fontList: -*-helvetica-bold-o-*-*-*-120-*-*-*-*-iso8859-1
+meshtv*doubleClickInterval: 500
+meshtv*background: #999
+meshtv*foreground: black
+meshtv*selectColor: red
+meshtv*spiDraw.driver: default
+
+! ANSYS
+*EUIDL*font: { Bitstream Vera Sans } 14 normal
+*EUIDL*Menu*font: { Bitstream Vera Sans } 13 normal
+*EUIDL*Menubutton*font: { Bitstream Vera Sans } 13 bold
+*EUIDL*MainMenu*font: { Sans Serif } 14 normal
+
+! the sparcs do not like rxvt-unicode
+! URxvt*termName: 'rxvt'
+
+! from http://tuxtraining.com/2009/07/28/how-to-have-a-lightweight-beautiful-functional-terminal
+URxvt*background: rgb:00/00/00
+URxvt*foreground: rgb:ee/ee/ee
+
+!black
+URxvt*color0:     rgb:00/00/00
+URxvt*color8:     rgb:66/66/66
+!red
+URxvt*color1:     rgb:e6/42/45
+URxvt*color9:     rgb:ef/81/71
+!green
+URxvt*color2:     rgb:ae/ce/92
+URxvt*color10:    rgb:c5/f7/79
+!brown/yellow
+URxvt*color3:     rgb:d4/c2/4f
+URxvt*color11:    rgb:e3/e3/31
+!blue
+URxvt*color4:     rgb:32/69/f2
+URxvt*color12:    rgb:47/95/d0
+!magenta
+URxvt*color5:     rgb:96/3c/59
+URxvt*color13:    rgb:ef/9e/be
+!cyan
+URxvt*color6:     rgb:1f/99/87
+URxvt*color14:    rgb:0e/bb/bb
+!white
+URxvt*color7:     rgb:9e/9e/9e
+URxvt*color15:    rgb:ee/ee/ee
+
+URxvt.perl-ext:	  default,matcher,tabbed
+URxvt.matcher.button: 3
+URxvt.urlLauncher: firefox
+URxvt*reverseVideo: false
+URxvt*fading:	  20
+URxvt*scrollBar: false
+!URxvt*font:	  xft:Anonymous Pro:pixelsize=11:antialiasing=true
+URxvt*font:	  xft:Inconsolata:pixelsize=15:antialiasing=false
+URxvt*transparent: true
+URxvt*shading: 16
+! prevent wasted paper
+URxvt.print-pipe: cat > $(mktemp --tmpdir urxvt.XXXXXX)
+URxvt*colorULMode: on
+URxvt*colorUL: green3
+URxvt*colorIT: yellow3
+URxvt*colorBD: #DB6E00
+URxvt*colorRV: #ff3333
+URxvt.cursorColor: #22cc22
+
+xterm*background: black
+xterm*foreground: white
+!xterm*faceName:      Inconsolata
+xterm*faceName:      Anonymous Pro
+xterm*faceSize: 16
+
+
