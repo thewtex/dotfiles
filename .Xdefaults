@@ -1,24 +1,3 @@
-!
-! meshtv resources
-!
-meshtv*fontList: -adobe-times-bold-r-normal-*-14-*-*-*-*-*-*-*
-meshtv*errorErrorLabel.fontList: -adobe-times-bold-r-normal-*-24-*-*-*-*-*-*-*
-meshtv**creditsQuoteLabel.fontList: -*-helvetica-bold-o-*-*-*-120-*-*-*-*-iso8859-1
-meshtv*doubleClickInterval: 500
-meshtv*background: #999
-meshtv*foreground: black
-meshtv*selectColor: red
-meshtv*spiDraw.driver: default
-
-! ANSYS
-*EUIDL*font: { Bitstream Vera Sans } 14 normal
-*EUIDL*Menu*font: { Bitstream Vera Sans } 13 normal
-*EUIDL*Menubutton*font: { Bitstream Vera Sans } 13 bold
-*EUIDL*MainMenu*font: { Sans Serif } 14 normal
-
-! the sparcs do not like rxvt-unicode
-! URxvt*termName: 'rxvt'
-
 ! from http://tuxtraining.com/2009/07/28/how-to-have-a-lightweight-beautiful-functional-terminal
 URxvt*background: rgb:00/00/00
 URxvt*foreground: rgb:ee/ee/ee
@@ -69,8 +48,8 @@ URxvt.cursorColor: #22cc22
 
 xterm*background: black
 xterm*foreground: white
-!xterm*faceName:      Inconsolata
-xterm*faceName:      Anonymous Pro
+xterm*faceName:      Inconsolata
+! xterm*faceName:      Anonymous Pro
 xterm*faceSize: 16
 
 
