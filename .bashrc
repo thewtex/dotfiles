@@ -14,71 +14,48 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+### Shell options ###
 set -o vi
-
-function pps(){ ps -eF | grep "$@" | grep --colour=auto -v 'grep'; }
-
-export HISTTIMEFORMAT="%Y%m%d %H:%M: "
-export HISTCONTROL=ignoreboth
-export HISTSIZE=2000
 shopt -s histappend
 
-[[ -f /etc/profile.d/bash-completion ]] && source /etc/profile.d/bash-completion
+### Source functions ###
+[[ -f /etc/profile.d/bash-completion.sh ]] && source /etc/profile.d/bash-completion.sh
 
-source /usr/share/bash-completion/git-prompt
+#source /usr/share/bash-completion/git-prompt
+#source /home/matt/apps/cmake-completion
+
+[ -f /usr/share/cdargs/cdargs-bash.sh ] && \
+source /usr/share/cdargs/cdargs-bash.sh
+
+### Variables ###
+export EDITOR=/usr/bin/vim
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
-PS1='\[\033[01;32m\]\u\[\033[00;34m\]@\[\033[01;35m\]\h\[\033[01;36m\] \w$(__git_ps1 " (%s)")\[\033[00;34m\]\$\[\033[00m\] '
-
-# Put your fun stuff here.
-
+export GREP_COLOR="01;32"  # color grep matches green
+export HISTTIMEFORMAT="%Y%m%d %H:%M: "
+export HISTCONTROL=ignoreboth
+export HISTSIZE=2000
+export LESS="$LESS -iJ"
 #PATH="/home/matt/scripts:/usr/libexec/cw:${PATH}"
 export PATH=/home/matt/bin:$PATH
+PS1='\[\033[01;32m\]\u\[\033[00;34m\]@\[\033[01;35m\]\h\[\033[01;36m\] \w$(__git_ps1 " (%s)")\[\033[00;34m\]\$\[\033[00m\] '
+export TERM=xterm-256color
 
-export PYTHONSTARTUP='/home/matt/.pystartup' 
-export PYTHONPATH="${PYTHONPATH}"
-export LESS="$LESS -iJ"
-export GREP_COLOR="01;32"  # color grep matches green
-export EDITOR=/usr/bin/vim
-
+### Aliases ###
 alias grep='grep --color'
-alias appareo='appareo -d /tmp'
-#alias gdb=/mnt/datac/archer/install/bin/gdb
 alias gca='git commit -a'
 alias gsa='git status'
-alias gnuc='git commit -a -e -m "$(/usr/bin/vc-chlog)"'
-alias mj='make -j8'
+cores=$(ls /sys/bus/cpu/devices | wc -w)
+alias mj="make -j -l${cores}"
 alias pyclewn='pyclewn --gdb=async,/tmp/pyclewn_project'
-function pdfrgrep() { find -name "*.pdf"  -print0 -exec pdfgrep -C50 -Hni $1 ‘{}’ \; ; }
-alias scre='screen -RD'
-# fix crashing at end of video play ?
 alias wp='wgetpaste --nick thewtex -X'
-alias q='qataki'
 alias iv='ImageViewer'
 # for pyclewn
 alias mq='hg -R $(hg root)/.hg/patches'
 alias tmux='tmux a -d || tmux'
 
-function x() { echo $1 | xclip ; }
-
-function em() { ebuild $1 manifest ; git add Manifest ; }
-
-function ch() { cmake --help-command $1 | less ; }
-source /home/matt/apps/cmake-completion
-
-export TERM=xterm-256color
-
-# need to open port 2628
-dict() { curl -s dict://dict.org/d:$1 | perl -ne 's/\r//; last if /^>$/; print if /^151/../^250/'; }
-
-#if [[ -n ${NXSESSIONID} ]]; then
-  #asdf
-#fi
-
-#source '/home/matt/scripts/convert3d_bashcomp.sh'
-
-aunpack() {
+function aunpack() {
   local TMP=$(mktemp /tmp/aunpack.XXXXXXXXXX)
   atool -x --save-outdir=$TMP "$@"
   DIR="$(cat $TMP)"
@@ -86,20 +63,31 @@ aunpack() {
   rm $TMP
 }
 
-# to allow the creation of core dumps, run this
-#ulimit -c unlimited
+function ch() {
+  cmake --help-command $1 | less ;
+}
 
-[ -f /usr/share/cdargs/cdargs-bash.sh ] && \
-source /usr/share/cdargs/cdargs-bash.sh
+# need to open port 2628
+function dict() {
+  curl -s dict://dict.org/d:$1 | perl -ne 's/\r//; last if /^>$/; print if /^151/../^250/';
+}
 
-pl() {
+function pl() {
   gnuplot -e "set term dumb; plot \"${1}\""
 }
-ppl() {
+function ppl() {
   gnuplot -e "plot \"${1}\"; pause -1"
+}
+
+function pps() {
+  ps -eF | grep "$@" | grep --colour=auto -v 'grep';
 }
 
 ranger() {
   command ranger --fail-unless-cd $@ &&
   cd "$(grep \^\' ~/.ranger/bookmarks | cut -b3-)"
+}
+
+function x() {
+  echo $1 | xclip ;
 }
