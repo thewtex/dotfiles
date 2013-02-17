@@ -38,6 +38,7 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=2000
 export LESS="$LESS -iJ"
 PATH="/usr/libexec/cw:${PATH}"
+PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 export PATH=/home/matt/bin/exe:$PATH
 PS1='\[\033[01;32m\]\u\[\033[00;34m\]@\[\033[01;35m\]\h\[\033[01;36m\] \w$(__git_ps1 " (%s)")\[\033[00;34m\]\$\[\033[00m\] '
 
@@ -46,7 +47,11 @@ alias grep='grep --color'
 alias gca='git commit -a'
 alias gsa='git status'
 cores=$(ls /sys/bus/cpu/devices | wc -w)
-alias mj="make -j -l${cores}"
+alias mj="make -j${cores} -l${cores}"
+alias nj="ninja -j${cores} -l${cores}"
+# This causes aliases passed to the notify script to also
+# be expanded before being sent to the script.
+alias notify='notify '
 alias pyclewn='pyclewn --gdb=async,/tmp/pyclewn_project'
 alias wp='wgetpaste --nick thewtex -X'
 alias iv='ImageViewer'
