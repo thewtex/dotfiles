@@ -37,7 +37,7 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=2000
 export LESS="$LESS -iJ"
 PATH="/usr/libexec/cw:${PATH}"
-export PATH=/home/matt/bin:$PATH
+export PATH=/home/matt/bin/exe:$PATH
 PS1='\[\033[01;32m\]\u\[\033[00;34m\]@\[\033[01;35m\]\h\[\033[01;36m\] \w$(__git_ps1 " (%s)")\[\033[00;34m\]\$\[\033[00m\] '
 
 ### Aliases ###
@@ -70,9 +70,14 @@ function dict() {
   curl -s dict://dict.org/d:$1 | perl -ne 's/\r//; last if /^>$/; print if /^151/../^250/';
 }
 
+function pdfrgrep() {
+  find -name "*.pdf"  -print0 -exec pdfgrep -C50 -Hni $1 ‘{}’ \;
+}
+
 function pl() {
   gnuplot -e "set term dumb; plot \"${1}\""
 }
+
 function ppl() {
   gnuplot -e "plot \"${1}\"; pause -1"
 }
