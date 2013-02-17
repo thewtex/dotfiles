@@ -19,13 +19,12 @@ set -o vi
 shopt -s histappend
 
 ### Source functions ###
-[[ -f /etc/profile.d/bash-completion.sh ]] && source /etc/profile.d/bash-completion.sh
-
-#source /usr/share/bash-completion/git-prompt
-#source /home/matt/apps/cmake-completion
+[[ -f /etc/profile.d/bash-completion.sh ]] && \
+  source /etc/profile.d/bash-completion.sh
+source ~/.config/dotfiles/.bash_completion.d/cmake-completion
 
 [ -f /usr/share/cdargs/cdargs-bash.sh ] && \
-source /usr/share/cdargs/cdargs-bash.sh
+  source /usr/share/cdargs/cdargs-bash.sh
 
 ### Variables ###
 export EDITOR=/usr/bin/vim
