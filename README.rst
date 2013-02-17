@@ -21,4 +21,4 @@ As *root*::
 
   
   emerge gnuplot ranger
-  eselect bashcomp enable --global bash-builtins configure eix gdb git git-prompt gpg2 imagemagick make python ssh starcluster-completion.sh tig vim
+  eselect bashcomp enable --global bash-builtins configure eix gdb git git-prompt gpg2 imagemagick make python ssh tig vim
