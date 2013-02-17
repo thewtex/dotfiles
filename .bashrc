@@ -27,6 +27,7 @@ source ~/.config/dotfiles/.bash_completion.d/cmake-completion
   source /usr/share/cdargs/cdargs-bash.sh
 
 ### Variables ###
+export CCACHE_COMPRESS=1
 export EDITOR=/usr/bin/vim
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
