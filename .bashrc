@@ -36,7 +36,7 @@ export HISTTIMEFORMAT="%Y%m%d %H:%M: "
 export HISTCONTROL=ignoreboth
 export HISTSIZE=2000
 export LESS="$LESS -iJ"
-#PATH="/home/matt/scripts:/usr/libexec/cw:${PATH}"
+PATH="/usr/libexec/cw:${PATH}"
 export PATH=/home/matt/bin:$PATH
 PS1='\[\033[01;32m\]\u\[\033[00;34m\]@\[\033[01;35m\]\h\[\033[01;36m\] \w$(__git_ps1 " (%s)")\[\033[00;34m\]\$\[\033[00m\] '
 
