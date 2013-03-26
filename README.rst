@@ -15,10 +15,10 @@ Basic setup
 
 ::
 
+  ln -s ~/.config/.bash_profile ~/.bash_profile
   ln -s ~/.config/.bashrc ~/.bashrc
 
 As *root*::
 
-  
-  emerge gnuplot ranger cdargs cw pdfgrep
+  emerge gnuplot ranger cdargs cw pdfgrep keychain
   eselect bashcomp enable --global bash-builtins configure eix gdb git git-prompt gpg2 imagemagick make python ssh tig vim
