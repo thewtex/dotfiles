@@ -107,6 +107,8 @@ au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
 map <leader>mt :make ctags<CR>
 
+set makeprg=ninja
+
 " Whitespace checking ( helps for git work )
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
