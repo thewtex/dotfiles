@@ -1,0 +1,16 @@
+[color]
+	diff = auto
+	branch = auto
+	interactive = auto
+	status = auto
+	ui = auto
+
+[core]
+	excludesfile = /home/matt/.gitignore_global
+[user]
+	name = Matt McCormick
+	email = matt.mccormick@kitware.com
+[merge]
+	tool = vimdiff
+[push]
+	default = simple
