@@ -7,10 +7,22 @@
 
 [core]
 	excludesfile = /home/matt/.gitignore_global
+	whitespace = trailing-space,space-before-tab
 [user]
 	name = Matt McCormick
 	email = matt.mccormick@kitware.com
 [merge]
 	tool = vimdiff
+[clean]
+	requireFore = false
+	requireForce = false
+[diff]
+	renamelimit = 10000
+[svn]
+	rmdir = true
 [push]
 	default = simple
+[hooks]
+	kwstyle = true
+[apply]
+	whitespace = fix
