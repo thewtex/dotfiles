@@ -48,6 +48,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Valoric/YouCompleteMe'
 
+let g:ycm_confirm_extra_conf = 0
+
 " lhs comments 
 map ,# :s/^/#/<CR>:nohlsearch<CR> 
 map ,/ :s/^/\/\//<CR>:nohlsearch<CR> 
@@ -113,7 +115,6 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
-map <leader>mt :make ctags<CR>
 
 set makeprg=ninja
 
