@@ -67,6 +67,7 @@ nnoremap ,( :s/^\(.*\)$/\(\* \1 \*\)/<CR>:nohlsearch<CR>
 nnoremap ,< :s/^\(.*\)$/<!-- \1 -->/<CR>:nohlsearch<CR> 
 nnoremap ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR>
 nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>tb :TagbarToggle<CR>
 let NERDTreeWinSize=50
 let NERDTreeWinPos="right"
 " shut up about Unknown filetype
