@@ -40,6 +40,14 @@ endif
 
 call pathogen#infect()
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+Bundle 'Valoric/YouCompleteMe'
+
 " lhs comments 
 map ,# :s/^/#/<CR>:nohlsearch<CR> 
 map ,/ :s/^/\/\//<CR>:nohlsearch<CR> 
