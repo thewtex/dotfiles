@@ -40,14 +40,6 @@ endif
 
 call pathogen#infect()
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-Bundle 'Valoric/YouCompleteMe'
-
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
