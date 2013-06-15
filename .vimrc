@@ -40,6 +40,18 @@ endif
 
 call pathogen#infect()
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+Bundle 'Valoric/YouCompleteMe'
+
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+
 " lhs comments 
 map ,# :s/^/#/<CR>:nohlsearch<CR> 
 map ,/ :s/^/\/\//<CR>:nohlsearch<CR> 
@@ -57,6 +69,7 @@ nnoremap ,( :s/^\(.*\)$/\(\* \1 \*\)/<CR>:nohlsearch<CR>
 nnoremap ,< :s/^\(.*\)$/<!-- \1 -->/<CR>:nohlsearch<CR> 
 nnoremap ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR>
 nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>tb :TagbarToggle<CR>
 let NERDTreeWinSize=50
 let NERDTreeWinPos="right"
 " shut up about Unknown filetype
@@ -105,7 +118,6 @@ let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
-map <leader>mt :make ctags<CR>
 
 set makeprg=ninja
 

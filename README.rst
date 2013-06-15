@@ -20,5 +20,5 @@ Basic setup
 
 As *root*::
 
-  emerge gnuplot ranger cdargs cw pdfgrep keychain
+  emerge gnuplot ranger cdargs cw pdfgrep keychain pylint clang ctags
   eselect bashcomp enable --global bash-builtins configure eix gdb git git-prompt gpg2 imagemagick make python ssh tig vim
