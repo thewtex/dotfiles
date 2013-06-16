@@ -1,0 +1,59 @@
+session:
+  name: "toolkit"
+  clear: true
+  windows:
+    - name: "shell"
+      layout: tiled
+      filters:
+        after: "fortune"
+      panes:
+        - cmd:
+          - "clear"
+        - cmd:
+          - "clear"
+        - cmd:
+          - "cd /tmp/"
+          - "clear"
+        - cmd: "fortune"
+          - "cd /tmp/"
+          - "clear"
+    - name: "itk1"
+      root: "~/src/ITK"
+      layout: main-vertical
+      panes:
+        - cmd: "vim ~/src/ITK/CMakeLists.txt"
+        - cmd:
+          - "clear"
+        - cmd:
+          - "cd ~/bin"
+          - "clear"
+    - name: "itk2"
+      root: "~/src/ITK2"
+      layout: main-vertical
+      panes:
+        - cmd: "vim ~/src/ITK2/CMakeLists.txt"
+        - cmd:
+          - "clear"
+        - cmd:
+          - "cd ~/bin"
+          - "clear"
+    - name: "tubetk1"
+      root: "~/src/TubeTK"
+      layout: main-vertical
+      panes:
+        - cmd: "vim ~/src/TubeTK/CMakeLists.txt"
+        - cmd:
+          - "clear"
+        - cmd:
+          - "cd ~/bin"
+          - "clear"
+    - name: "tubetk2"
+      root: "~/src/TubeTK2"
+      layout: main-vertical
+      panes:
+        - cmd: "vim ~/src/TubeTK2/CMakeLists.txt"
+        - cmd:
+          - "clear"
+        - cmd:
+          - "cd ~/bin"
+          - "clear"
