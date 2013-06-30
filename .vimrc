@@ -89,6 +89,14 @@ map <leader>mj :mak -j8<CR>
 map <leader>me :mak test<CR>
 map <leader>ma :mak<CR>
 
+" unite plugin mappings suggested here
+" http://bling.github.io//blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/
+nnoremap <C-p> :Unite file_rec/async<CR>
+nnoremap <space>/ :Unite grep:.<CR>
+nnoremap <space>s :Unite -quick-match buffer<CR>
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :<C-u>Unite history/yank<CR>
+
 let g:DoxygenToolkit_authorName="Matthew McCormick (thewtex) <matt@mmmccormick.com>"
 let g:DoxygenToolkit_licenseTag="Public Domain"
 
