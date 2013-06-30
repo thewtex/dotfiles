@@ -97,6 +97,8 @@ nnoremap <space>s :Unite -quick-match buffer<CR>
 let g:unite_source_history_yank_enable = 1
 nnoremap <space>y :<C-u>Unite history/yank<CR>
 
+nnoremap <leader>u :UndotreeToggle<CR>
+
 let g:DoxygenToolkit_authorName="Matthew McCormick (thewtex) <matt@mmmccormick.com>"
 let g:DoxygenToolkit_licenseTag="Public Domain"
 
