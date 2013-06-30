@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/undotree"]
 	path = .vim/bundle/undotree
 	url = https://github.com/mbbill/undotree.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
