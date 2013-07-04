@@ -67,6 +67,7 @@ let NERDTreeWinPos="right"
 " shut up about Unknown filetype
 let NERDShutUp=1
 
+vnoremap <silent> <Enter> :EasyAlign<CR>
 
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Close_On_Select = 1
@@ -104,9 +105,6 @@ let g:DoxygenToolkit_licenseTag="Public Domain"
 
 let g:SuperTabDefaultCompletionType="context"
 let g:SuperTabContextDefaultCompletionType="<c-p>"
-
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/itk
 
 " OmniCppComplete
 let OmniCpp_NamespaceSearch = 1
