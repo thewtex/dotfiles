@@ -38,6 +38,7 @@ export GREP_COLOR="01;32"  # color grep matches green
 export HISTTIMEFORMAT="%Y%m%d %H:%M: "
 export HISTCONTROL=ignoreboth
 export HISTSIZE=2000
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export LESS="$LESS -iJ"
 PATH="/usr/libexec/cw:${PATH}"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
