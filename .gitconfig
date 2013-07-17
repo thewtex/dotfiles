@@ -4,10 +4,10 @@
 	interactive = auto
 	status = auto
 	ui = auto
-
 [core]
 	excludesfile = /home/matt/.gitignore_global
 	whitespace = trailing-space,space-before-tab
+	editor = vim
 [user]
 	name = Matt McCormick
 	email = matt.mccormick@kitware.com
@@ -26,3 +26,7 @@
 	kwstyle = true
 [apply]
 	whitespace = fix
+# git sed 's/old-method-name/new-method-name/ig'
+[alias]
+	sed = ! git grep -z --full-name -l '.' | xargs -0 sed -i -e
+
