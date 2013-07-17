@@ -24,7 +24,7 @@ set ignorecase smartcase " when searching, search pattern with an uppercase lett
 set guifont=Inconsolata\ 10
 " wrapping textwidth
 set history=500				" keep 50 lines of command history
-set textwidth=80
+set textwidth=78
 set formatlistpat=^\\s*\\(\\d\\+\\\|[a-z]\\)[\\].)]\\s*
 set formatoptions+=tqn
 
