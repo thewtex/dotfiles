@@ -22,6 +22,7 @@ set hlsearch
 set incsearch
 set ignorecase smartcase " when searching, search pattern with an uppercase letter will only be case-sensitive
 set guifont=Inconsolata\ 10
+set guioptions+=a
 " wrapping textwidth
 set history=500				" keep 50 lines of command history
 set textwidth=78
