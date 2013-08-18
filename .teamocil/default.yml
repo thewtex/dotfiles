@@ -57,3 +57,13 @@ session:
         - cmd:
           - "cd ~/bin"
           - "clear"
+    - name: "examples"
+      root: "~/src/ITKExamples"
+      layout: main-vertical
+      panes:
+        - cmd: "vim ~/src/ITKExamples/CMakeLists.txt"
+        - cmd:
+          - "clear"
+        - cmd:
+          - "cd ~/bin"
+          - "clear"
