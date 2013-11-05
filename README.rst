@@ -20,6 +20,6 @@ Basic setup
 
 As *root*::
 
-  emerge gnuplot ranger cdargs cw pdfgrep keychain flake8 clang ctags fortune-mod-all
+  emerge gnuplot ranger cdargs cw pdfgrep keychain flake8 clang ctags fortune-mod-all atool
   eselect bashcomp enable --global bash-builtins configure eix gdb git git-prompt gpg2 imagemagick make python ssh tig vim
   gem install teamocil
