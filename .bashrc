@@ -40,7 +40,6 @@ export HISTCONTROL=ignoreboth
 export HISTSIZE=2000
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export LESS="$LESS -iJ"
-PATH="/usr/libexec/cw:${PATH}"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 export PATH=/home/matt/bin/exe:$PATH
 PS1='\[\033[01;32m\]\u\[\033[00;34m\]@\[\033[01;35m\]\h\[\033[01;36m\] \w$(__git_ps1 " (%s)")\[\033[00;34m\]\$\[\033[00m\] '
