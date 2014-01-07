@@ -26,7 +26,7 @@ source ~/.config/dotfiles/.bash_completion.d/cmake-completion
 [ -f /usr/share/cdargs/cdargs-bash.sh ] && \
   source /usr/share/cdargs/cdargs-bash.sh
 
-complete -W "$(teamocil --list)" teamocil
+#complete -W "$(teamocil --list)" teamocil
 
 ### Variables ###
 export CCACHE_COMPRESS=1
