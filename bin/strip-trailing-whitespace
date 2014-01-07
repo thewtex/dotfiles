@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# strip trailing whitespaces from filenames sent to stdin or as args
+# Matt McCormick (thewtex) <matt@mmmccormick.com>
+# created 2008 May 01
+
+MYTEMP=`tempfile`
+trap 'rm -f $MYTEMP' SIGINT SIGTERM
+
+stripit() {
+  echo "stripping $1"
+  sed 's/[ \t]*$//' "$1" > $MYTEMP
+  cp $MYTEMP "$1"
+}
+
+if [ $# -gt 0 ]; then
+  while [ "$1" != "" ]; do
+    stripit $1
+    shift
+  done
+else
+  while read; do
+    stripit $REPLY 
+  done
+fi
+
+rm $MYTEMP
