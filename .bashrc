@@ -22,6 +22,7 @@ shopt -s histappend
 [[ -f /etc/profile.d/bash-completion.sh ]] && \
   source /etc/profile.d/bash-completion.sh
 source ~/.config/dotfiles/.bash_completion.d/cmake-completion
+source ~/.config/dotfiles/.bash_completion.d/git-prompt
 
 [ -f /usr/share/cdargs/cdargs-bash.sh ] && \
   source /usr/share/cdargs/cdargs-bash.sh
