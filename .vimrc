@@ -41,6 +41,18 @@ endif
 
 call pathogen#infect()
 
+let g:syntastic_check_on_open = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_mode_map = { 'mode' : 'active', 'active_filetype': ['cpp', 'python'] }
+let g:syntastic_cpp_checkers = [ 'cppcheck' ]
+let g:syntastic_python_checkers = [ 'pyflakes', 'pylint' ]
+"let g:syntastic_debug_file = '/tmp/syntastic_debug.log'
+" 1 - trace checker calls
+" 2 - dump loclists
+" 4 - trace notifiers
+" 8 - trace autocommands
+" 16 - dump variables
+"let g:syntastic_debug=1
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
