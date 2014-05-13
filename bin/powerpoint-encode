@@ -9,7 +9,7 @@ show_help() {
 cat << EOF
 Usage: ${0##*/} [-h] [-b bitrate] [-s scale] [-o OUTFILE] [INFILE]
 
-Convert the input video file into a format usable by PowerPoint with MEncoder.
+Convert the input video file into a format usable by PowerPoint with FFMPEG
 
   -h             display this help and exit
   -b             Video bitrate, defaults to 2000
