@@ -1,0 +1,69 @@
+#!/bin/bash
+
+#if [[ $# -lt 1 ]] || "$1" = "-h" || "$1" = "--help" ]] ; then
+  #echo "error: Pass in the input video"
+  #exit 1
+#fi
+
+show_help() {
+cat << EOF
+Usage: ${0##*/} [-h] [-b bitrate] [-s scale] [-o OUTFILE] [INFILE]
+
+Convert the input video file into a format usable by PowerPoint with MEncoder.
+
+  -h             display this help and exit
+  -b             Video bitrate, defaults to 2000
+  -s             Output video size, defaults to 800:
+EOF
+}
+
+input=$1
+output=${input%.*}_powerpoint.avi
+bitrate=2000k
+scale=1000:-1
+
+OPTIND=1
+while getopts "obs:h" opt; do
+  case "$opt" in
+    h)
+      show_help
+      exit 0
+      ;;
+    o)
+      output=$OPTARG
+      ;;
+    b)
+      bitrate=$OPTARG
+      ;;
+    s)
+      scale=$OPTARG
+      ;;
+    '?')
+      show_help >&2
+      exit 1
+      ;;
+  esac
+done
+shift "$((OPTIND - 1))"
+
+if [[ ! -e $input ]]; then
+  echo -e "Input file does not exist!\n" >&2
+  show_help >&2
+  exit 1
+fi
+
+ffmpeg -i "$input" \
+  -y \
+  -b:v ${bitrate} \
+  -vcodec msmpeg4v2 \
+  -mbd 2 \
+  -flags +mv0 \
+  -trellis 1 \
+  -last_pred 3 \
+  -precmp 2 \
+  -cmp 2 \
+  -subcmp 2 \
+  -preme 2 \
+  -qns 2 \
+  -vf scale=$scale \
+  $output
