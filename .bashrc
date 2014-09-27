@@ -32,6 +32,7 @@ source ~/.config/dotfiles/.bash_completion.d/git-prompt
 ### Variables ###
 export CCACHE_COMPRESS=1
 export EDITOR=/usr/bin/vim
+export ExternalData_OBJECT_STORES=${HOME}/data
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="verbose"
