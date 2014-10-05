@@ -10,6 +10,13 @@ Basic setup
   cd ~/.config
   git clone git@github.com:thewtex/dotfiles.git
 
+gentoo setup
+------------
+
+::
+
+  ./gentoo-packages
+
 .bashrc setup
 -------------
 
@@ -20,6 +27,5 @@ Basic setup
 
 As *root*::
 
-  emerge ranger cdargs pdfgrep keychain flake8 clang ctags fortune-mod-all atool tig
-  eselect bashcomp enable --global bash-builtins configure eix gdb git git-prompt gpg2 imagemagick make python ssh tig vim
+  ./gentoo-packages
   gem install teamocil

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+emerge \
+  atool \
+  awesome \
+  cdargs \
+  clang \
+  ctags \
+  docker \
+  keychain \
+  flake8 \
+  fortune-mod-all \
+  pdfgrep \
+  qtile \
+  ranger \
+  rxvt-unicode \
+  tig \
+  x11-misc/xclip
+eselect bashcomp enable --global \
+  bash-builtins \
+  configure \
+  eix \
+  gdb \
+  git \
+  git-prompt \
+  gpg2 \
+  imagemagick \
+  make \
+  python \
+  ssh \
+  tig \
+  vim
