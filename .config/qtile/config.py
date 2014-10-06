@@ -45,7 +45,7 @@ keys = [
         [mod, "shift"], "Return",
         lazy.layout.toggle_split()
     ),
-    Key([mod], "Return", lazy.spawn("xterm")),
+    Key([mod], "Return", lazy.spawn("urxvt")),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.nextlayout()),
@@ -113,4 +113,6 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating()
 auto_fullscreen = True
+:qa
 wmname = "qtile"
+lazy.spawn("setxkbmap dvorak")
