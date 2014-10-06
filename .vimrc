@@ -57,21 +57,21 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 
-" lhs comments 
-map ,# :s/^/#/<CR>:nohlsearch<CR> 
-map ,/ :s/^/\/\//<CR>:nohlsearch<CR> 
-map ,> :s/^/> /<CR>:nohlsearch<CR> 
-map ," :s/^/\"/<CR>:nohlsearch<CR> 
-map ,% :s/^/%/<CR>:nohlsearch<CR> 
-map ,! :s/^/!/<CR>:nohlsearch<CR> 
-map ,; :s/^/;/<CR>:nohlsearch<CR> 
-map ,- :s/^/--/<CR>:nohlsearch<CR> 
-map ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>:nohlsearch<CR> 
+" lhs comments
+map ,# :s/^/#/<CR>:nohlsearch<CR>
+map ,/ :s/^/\/\//<CR>:nohlsearch<CR>
+map ,> :s/^/> /<CR>:nohlsearch<CR>
+map ," :s/^/\"/<CR>:nohlsearch<CR>
+map ,% :s/^/%/<CR>:nohlsearch<CR>
+map ,! :s/^/!/<CR>:nohlsearch<CR>
+map ,; :s/^/;/<CR>:nohlsearch<CR>
+map ,- :s/^/--/<CR>:nohlsearch<CR>
+map ,c :s/^\/\/\\|^--\\|^> \\|^[#"%!;]//<CR>:nohlsearch<CR>
 
-" wrapping comments 
+" wrapping comments
 nnoremap ,* :s/^\(\s*\)\(.*\)$/\1\/\*************** \2 \***************\//<CR>:nohlsearch<CR>
-nnoremap ,( :s/^\(.*\)$/\(\* \1 \*\)/<CR>:nohlsearch<CR> 
-nnoremap ,< :s/^\(.*\)$/<!-- \1 -->/<CR>:nohlsearch<CR> 
+nnoremap ,( :s/^\(.*\)$/\(\* \1 \*\)/<CR>:nohlsearch<CR>
+nnoremap ,< :s/^\(.*\)$/<!-- \1 -->/<CR>:nohlsearch<CR>
 nnoremap ,d :s/^\([/(]\*\\|<!--\) \(.*\) \(\*[/)]\\|-->\)$/\2/<CR>:nohlsearch<CR>
 nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>tb :TagbarToggle<CR>
