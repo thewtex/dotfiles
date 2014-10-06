@@ -56,6 +56,13 @@ let g:syntastic_python_checkers = [ 'pyflakes', 'pylint' ]
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
+let g:ycm_server_keep_logfiles = 1
+"debug
+"info
+"warning
+"error
+"critical
+let g:ycm_server_log_level = 'warning'
 
 " lhs comments
 map ,# :s/^/#/<CR>:nohlsearch<CR>
