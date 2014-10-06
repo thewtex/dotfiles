@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# Concatenate all compile_command.json files into a single file.
-store=/home/matt/data
-cat $(find $store/compile_commands -name compile_commands.json) > \
-  $store/compile_commands.json
