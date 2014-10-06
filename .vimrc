@@ -87,9 +87,6 @@ let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
 nnoremap <leader>tt :TlistToggle<CR>
 
-" vtk class instantiation
-map ,s :s/^\(\s*\)\(\a\+\)\s\+\(\a\+\)/\1vtkSmartPointer\< \2\ > \3 = vtkSmartPointer\< \2 \>::New\(\);/<CR>:nohlsearch<CR>o
-
 " http://wiki.contextgarden.net/Vim
 let g:tex_flavor = "latex"
 
