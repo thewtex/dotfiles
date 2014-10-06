@@ -17,13 +17,13 @@ gentoo setup
 
   ./gentoo-packages
 
-.bashrc setup
+config setup
 -------------
 
 ::
 
-  ln -s ~/.config/.bash_profile ~/.bash_profile
-  ln -s ~/.config/.bashrc ~/.bashrc
+  ./directory-layout
+  ./symlinks-config
 
 As *root*::
 

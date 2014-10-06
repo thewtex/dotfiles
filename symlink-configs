@@ -1,0 +1,36 @@
+#!/bin/sh
+
+cd ~
+for config in .bashrc \
+  .bash_completion.d \
+  .bash_profile \
+  .gitconfig \
+  .gitignore_global \
+  .gnupg \
+  .tmux.conf \
+  .vim \
+  .vimrc \
+  .wgetrc \
+  .Xdefaults \
+  .ycm_extra_conf.py
+  do
+  if test -f $config -a ! -L $config; then
+    mv $config ${config}.old
+  fi
+  if test ! -e $config; then
+    ln -s ~/.config/dotfiles/$config
+  fi
+done
+
+cd ~/.config
+for config in awesome \
+  qtile
+  do
+  if test ! -d $config; then
+    ln -s ~/.config/dotfiles/.config/$config
+  fi
+done
+
+if test ! -e .tmux.local.conf; then
+  cp ~/.config/dotfiles/.tmux.local.conf .
+fi
