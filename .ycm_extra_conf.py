@@ -130,7 +130,7 @@ def GetCompilationInfoForFile( filename ):
           if os.path.exists( replacement_file ):
             compilation_info = database.GetCompilationInfoForFile(
                                        replacement_file )
-            if compilation_info.compiler_flags_:
+            if compilation_info and compilation_info.compiler_flags_:
               return compilation_info
           else: ## Search in nearby directories
               pass
@@ -142,6 +142,9 @@ def FlagsForFile( filename ):
     # Bear in mind that compilation_info.compiler_flags_ does NOT return a
     # python list, but a "list-like" StringVec object
     compilation_info = GetCompilationInfoForFile( filename )
+    if not compilation_info:
+      return None
+
     final_flags = MakeRelativePathsInFlagsAbsolute(
       compilation_info.compiler_flags_,
       compilation_info.compiler_working_dir_ )
