@@ -49,7 +49,7 @@ keys = [
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.nextlayout()),
-    Key([mod], "w", lazy.window.kill()),
+    Key([mod, "shift"],"c", lazy.window.kill()),
 
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
@@ -76,18 +76,17 @@ layouts = [
 
 widget_defaults = dict(
     font='Arial',
-    fontsize=16,
+    fontsize=14,
     padding=3,
 )
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
                 widget.GroupBox(),
                 widget.Prompt(),
                 widget.WindowName(),
-                widget.TextBox("default config", name="default"),
                 widget.Systray(),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
             ],
@@ -113,6 +112,5 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating()
 auto_fullscreen = True
-:qa
 wmname = "qtile"
 lazy.spawn("setxkbmap dvorak")
