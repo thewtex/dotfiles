@@ -3,26 +3,34 @@
 emerge \
   atool \
   awesome \
+  bash-completion \
   ccache \
   cdargs \
   clang \
   cppcheck \
+  cgdb \
   ctags \
   docker \
+  eselect-bashcomp \
   keychain \
   flake8 \
   fortune-mod-all \
   google-talkplugin \
   inconsolata \
+  mosh \
+  nemiver \
   dev-util/ninja \
   pdfgrep \
   pylint \
+  pavucontrol \
   qtile \
   ranger \
   rxvt-unicode \
   tig \
   youcompleteme \
+  valgrind \
   x11-misc/xclip
+
 eselect bashcomp enable --global \
   bash-builtins \
   configure \
