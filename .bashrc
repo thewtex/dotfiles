@@ -47,8 +47,8 @@ export PATH="${HOME}/bin/exe:${PATH}"
 PS1='\[\033[01;32m\]\u\[\033[00;34m\]@\[\033[01;35m\]\h\[\033[01;36m\] \w$(__git_ps1 " (%s)")\[\033[00;34m\]\$\[\033[00m\] '
 
 ### Aliases ###
-alias cmake='cmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
-alias ccmake='ccmake -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
+alias cmake='cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
+alias ccmake='ccmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias grep='grep --color'
 alias gca='git commit -a'
 alias gsa='git status'
