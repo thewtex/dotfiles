@@ -29,12 +29,14 @@ keys = [
     Key(
         [mod], "h",
         lazy.layout.decrease_ratio(),
-        lazy.layout.shrink()
+        lazy.layout.shrink(),
+        lazy.layout.next()
     ),
     Key(
         [mod], "l",
         lazy.layout.increase_ratio(),
-        lazy.layout.grow()
+        lazy.layout.grow(),
+        lazy.layout.previous()
     ),
     Key(
         [mod], "n",
@@ -175,3 +177,4 @@ def startup():
     subprocess.Popen(['setxkbmap', 'dvorak'])
     subprocess.Popen(['synaptiks'])
     subprocess.Popen(['/home/matt/.config/dotfiles/bin/synaptics.conf.sh'])
+    subprocess.Popen(['dbus-launch', 'nm-applet'])
