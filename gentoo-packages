@@ -22,10 +22,12 @@ emerge \
   dev-util/ninja \
   pdfgrep \
   pylint \
+  pyqtgraph \
   pavucontrol \
   qtile \
   ranger \
   rxvt-unicode \
+  subversion \
   tig \
   youcompleteme \
   valgrind \
@@ -33,6 +35,7 @@ emerge \
 
 eselect bashcomp enable --global \
   bash-builtins \
+  cmake \
   configure \
   eix \
   gdb \
@@ -41,7 +44,11 @@ eselect bashcomp enable --global \
   gpg2 \
   imagemagick \
   make \
+  ninja \
   python \
   ssh \
   tig \
-  vim
+  tmux \
+  valgrind \
+  vim \
+  xmodmap
