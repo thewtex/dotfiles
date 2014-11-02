@@ -37,6 +37,7 @@ eselect bashcomp enable --global \
   bash-builtins \
   cmake \
   configure \
+  docker \
   eix \
   gdb \
   git \
