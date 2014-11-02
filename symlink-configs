@@ -13,7 +13,8 @@ for config in .bashrc \
   .vimrc \
   .wgetrc \
   .Xdefaults \
-  .ycm_extra_conf.py
+  .ycm_extra_conf.py \
+  .zshrc
   do
   if test -f $config -a ! -L $config; then
     mv $config ${config}.old
