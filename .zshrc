@@ -106,6 +106,131 @@ bindkey "^S" history-incremental-pattern-search-forward
 setopt autocd
 setopt extendedglob
 
+# Activate syntax highlighting from
+# https://github.com/zsh-users/zsh-syntax-highlighting/
+#
+# Set colors according to a 256 color scheme if supported.
+# (We assume always a black background since anything else causes headache.)
+# This is tested with xterm and the following xresources:
+#
+# XTerm*cursorColor: green
+# XTerm*background:  black
+# XTerm*foreground:  white
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
+if [[ $#ZSH_HIGHLIGHT_MATCHING_BRACKETS_STYLES -eq 0 ]] &&
+        . "$(for i in ${DEFAULTS:+${^DEFAULTS%/}/zsh{/zsh-syntax-highlighting,}} \
+                /usr/share/zsh/site-contrib{/zsh-syntax-highlighting,} \
+                $path
+        do      j=$i/zsh-syntax-highlighting.zsh && [[ -f $j ]] && echo -nE $j && exit
+        done)" NIL
+then    typeset -gUa ZSH_HIGHLIGHT_HIGHLIGHTERS
+        ZSH_HIGHLIGHT_HIGHLIGHTERS+=(
+                main            # color syntax while typing (active by default)
+#                patterns        # color according to ZSH_HIGHLIGHT_PATTERNS
+                brackets        # color matching () {} [] pairs
+#                cursor          # color cursor; useless with cursorColor
+                root            # color if you are root; broken in some versions
+        )
+        typeset -gUa ZSH_ZSH_HIGHLIGHT_TOKENS_PRECOMMANDS
+        ZSH_HIGHLIGHT_TOKENS_PRECOMMANDS+=(sudo fakeroot fakeroot-ng)
+        typeset -ga ZSH_HIGHLIGHT_MATCHING_BRACKETS_STYLES
+        typeset -gA ZSH_HIGHLIGHT_STYLES
+        if [[ $(echotc Co) -ge 256 ]]
+        then    ZSH_HIGHLIGHT_MATCHING_BRACKETS_STYLES=(
+                        fg=98,bold
+                        fg=135,bold
+                        fg=141,bold
+                        fg=147,bold
+                        fg=153,bold
+                )
+                ZSH_HIGHLIGHT_STYLES+=(
+                        'default'                       fg=252
+                        'unknown-token'                 fg=64,bold
+                        'reserved-word'                 fg=84,bold
+                        'alias'                         fg=118,bold
+                        'builtin'                       fg=47,bold
+                        'function'                      fg=76,bold
+                        'command'                       fg=40,bold
+                        'precommand'                    fg=40,bold
+                        'hashed-command'                fg=40,bold
+                        'path'                          fg=214,bold
+                        'path_prefix'                   fg=214,bold
+                        'path_approx'                   none
+                        'globbing'                      fg=190,bold
+                        'history-expansion'             fg=166,bold
+                        'single-hyphen-option'          fg=33,bold
+                        'double-hyphen-option'          fg=45,bold
+                        'back-quoted-argument'          fg=202
+                        'single-quoted-argument'        fg=181,bold
+                        'double-quoted-argument'        fg=181,bold
+                        'dollar-double-quoted-argument' fg=196
+                        'back-double-quoted-argument'   fg=202
+                        'assign'                        fg=159,bold
+                        'bracket-error'                 fg=196,bold
+                )
+                if [[ ${SOLARIZED:-n} != [nNfF0]* ]]
+                then    ZSH_HIGHLIGHT_STYLES+=(
+                        'default'                       none
+                        'unknown-token'                 fg=red,bold
+                        'reserved-word'                 fg=white
+                        'alias'                         fg=cyan,bold
+                        'builtin'                       fg=yellow,bold
+                        'function'                      fg=blue,bold
+                        'command'                       fg=green
+                        'precommand'                    fg=green
+                        'hashed-command'                fg=green
+                        'path'                          fg=yellow
+                        'path_prefix'                   fg=yellow
+                        'path_approx'                   none
+                        'globbing'                      fg=magenta
+                        'single-hyphen-option'          fg=green,bold
+                        'double-hyphen-option'          fg=magenta,bold
+                        'assign'                        fg=cyan
+                        'bracket-error'                 fg=red
+                )
+                fi
+        else    ZSH_HIGHLIGHT_MATCHING_BRACKETS_STYLES=(
+                        fg=cyan
+                        fg=magenta
+                        fg=blue,bold
+                        fg=red
+                        fg=green
+                )
+                ZSH_HIGHLIGHT_STYLES+=(
+                        'default'                       none
+                        'unknown-token'                 fg=red,bold
+                        'reserved-word'                 fg=green,bold
+                        'alias'                         fg=green,bold
+                        'builtin'                       fg=green,bold
+                        'function'                      fg=green,bold
+                        'command'                       fg=yellow,bold
+                        'precommand'                    fg=yellow,bold
+                        'hashed-command'                fg=yellow,bold
+                        'path'                          fg=white,bold
+                        'path_prefix'                   fg=white,bold
+                        'path_approx'                   none
+                        'globbing'                      fg=magenta,bold
+                        'history-expansion'             fg=yellow,bold,bg=red
+                        'single-hyphen-option'          fg=cyan,bold
+                        'double-hyphen-option'          fg=cyan,bold
+                        'back-quoted-argument'          fg=yellow,bg=blue
+                        'single-quoted-argument'        fg=yellow
+                        'double-quoted-argument'        fg=yellow
+                        'dollar-double-quoted-argument' fg=yellow,bg=blue
+                        'back-double-quoted-argument'   fg=yellow,bg=blue
+                        'assign'                        fg=yellow,bold,bg=blue
+                        'bracket-error'                 fg=red,bold
+                )
+        fi
+        () {
+                local i
+                for i in {1..5}
+                do      ZSH_HIGHLIGHT_STYLES[bracket-level-$i]=${ZSH_HIGHLIGHT_MATCHING_BRACKETS_STYLES[$i]}
+                done
+        }
+fi
+
+
 # vi key bindings
 bindkey -v
 

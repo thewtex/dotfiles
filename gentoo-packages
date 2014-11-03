@@ -33,7 +33,9 @@ emerge \
   valgrind \
   x11-misc/xclip \
   zsh \
-  zsh-completion
+  zsh-completion \
+  zsh-completions \
+  zsh-syntax-highlighting
 
 eselect bashcomp enable --global \
   bash-builtins \
