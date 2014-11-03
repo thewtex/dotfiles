@@ -13,7 +13,7 @@ setopt correctall
 autoload -U promptinit
 promptinit
 prompt adam2
-export HISTFILE="$HOME/.history"
+. ${HOME}/.git_prompt.zsh
 
 # history
 export HISTSIZE=2000
@@ -21,6 +21,10 @@ export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
+[[ -n "${key[PageUp]}"   ]]  && bindkey  "${key[PageUp]}"    history-beginning-search-backward
+[[ -n "${key[PageDown]}" ]]  && bindkey  "${key[PageDown]}"  history-beginning-search-forward
+bindkey "^R" history-incremental-pattern-search-backward
+bindkey "^S" history-incremental-pattern-search-forward
 
 # misc
 setopt autocd
@@ -28,6 +32,9 @@ setopt extendedglob
 
 # vi key bindings
 bindkey -v
+
+# do not require 'rehash' to be run to find new executables
+setopt nohashdirs
 
 # misc environmental variables
 export CCACHE_COMPRESS=1
@@ -55,6 +62,7 @@ alias pyclewn='pyclewn --gdb=async,/tmp/pyclewn_project'
 alias wp='wgetpaste --nick thewtex -X'
 alias iv='ImageViewer'
 alias tmux='tmux -2 a -d || tmux -2'
+alias ls='ls --color=auto --human-readable --group-directories-first --classify'
 
 function aunpack() {
   local TMP=$(mktemp /tmp/aunpack.XXXXXXXXXX)

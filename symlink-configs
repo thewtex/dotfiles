@@ -6,6 +6,7 @@ for config in .bashrc \
   .bash_profile \
   .gitconfig \
   .gitignore_global \
+  .git_prompt.zsh \
   .gnupg \
   .inputrc \
   .tmux.conf \
