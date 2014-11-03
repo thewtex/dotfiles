@@ -264,6 +264,10 @@ alias wp='wgetpaste --nick thewtex -X'
 alias iv='ImageViewer'
 alias tmux='tmux -2 a -d || tmux -2'
 alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+alias -s cxx=vim
+alias -s h=vim
+alias -s hxx=vim
+alias -s pdf=evince
 
 function aunpack() {
   local TMP=$(mktemp /tmp/aunpack.XXXXXXXXXX)
