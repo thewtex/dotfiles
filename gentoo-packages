@@ -31,7 +31,11 @@ emerge \
   tig \
   youcompleteme \
   valgrind \
-  x11-misc/xclip
+  x11-misc/xclip \
+  zsh \
+  zsh-completion \
+  zsh-completions \
+  zsh-syntax-highlighting
 
 eselect bashcomp enable --global \
   bash-builtins \
