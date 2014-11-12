@@ -251,7 +251,7 @@ export EDITOR=/usr/bin/vim
 export ExternalData_OBJECT_STORES=${HOME}/data
 export GREP_COLOR="01;32"  # color grep matches green
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
-export LESS="$LESS -iJ"
+export LESS="$LESS -iJr"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 export PATH="${HOME}/bin/exe:${PATH}"
 
