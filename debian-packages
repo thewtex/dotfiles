@@ -1,0 +1,36 @@
+#!/bin/sh
+
+apt-get install \
+  atool \
+  awesome \
+  bash-completion \
+  ccache \
+  cdargs \
+  clang \
+  cppcheck \
+  cgdb \
+  ctags \
+  docker \
+  keychain \
+  python-flake8 \
+  git \
+  gnupg2 \
+  fonts-inconsolata \
+  mosh \
+  nemiver \
+  ninja-build \
+  pdfgrep \
+  pinentry-curses \
+  pylint \
+  python-pyqtgraph \
+  pavucontrol \
+  ranger \
+  rxvt-unicode-256color \
+  subversion \
+  tig \
+  tmux \
+  vim-youcompleteme \
+  valgrind \
+  vim \
+  xclip \
+  zsh
