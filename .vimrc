@@ -34,7 +34,7 @@ au BufNewFile,BufRead *.cxx set filetype=cpp
 
 if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode" || &term =~ "builtin_gui" || $TERM == "dumb"
         set t_Co=256
-        colorscheme lettuce
+        colorscheme molokayo
 else
         colorscheme desert
 endif
