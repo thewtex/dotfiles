@@ -22,9 +22,9 @@ fi
 /usr/bin/tmux display-message "${notification}"
 
 if which notify-send &> /dev/null; then
-  notify-send "${notification}"
+  notify-send "${notification}" &
 fi
 
 if which espeak &> /dev/null; then
-  espeak "${notification}"
+  espeak "${notification}" &
 fi
