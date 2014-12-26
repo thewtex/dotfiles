@@ -37,3 +37,6 @@ done
 if test ! -e .tmux.local.conf; then
   cp ~/.config/dotfiles/.tmux.local.conf .
 fi
+
+cd ~/.vim/bundle/vimproc.vim
+make
