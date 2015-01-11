@@ -36,24 +36,3 @@ emerge \
   zsh \
   zsh-completions \
   zsh-syntax-highlighting
-
-eselect bashcomp enable --global \
-  bash-builtins \
-  cmake \
-  configure \
-  docker \
-  eix \
-  gdb \
-  git \
-  git-prompt \
-  gpg2 \
-  imagemagick \
-  make \
-  ninja \
-  python \
-  ssh \
-  tig \
-  tmux \
-  valgrind \
-  vim \
-  xmodmap
