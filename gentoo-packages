@@ -10,7 +10,7 @@ emerge \
   cppcheck \
   cgdb \
   ctags \
-  docker \
+  app-emulation/docker \
   eselect-bashcomp \
   keychain \
   flake8 \
@@ -34,7 +34,6 @@ emerge \
   valgrind \
   x11-misc/xclip \
   zsh \
-  zsh-completion \
   zsh-completions \
   zsh-syntax-highlighting
 
