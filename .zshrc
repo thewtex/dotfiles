@@ -265,7 +265,12 @@ alias ccmake='ccmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias grep='grep --color'
 alias gca='git commit -a'
 alias gsa='git status'
-cores=$(ls /sys/bus/cpu/devices | wc -w)
+if test -d /sys/bus/cpu/devices; then
+  cores=$(ls /sys/bus/cpu/devices | wc -w)
+else
+  # Windows
+  cores=$(wmic cpu get NumberOfCores | tail -n 2 | head -n 1)
+fi
 alias mj="make -j${cores} -l${cores}"
 alias nj="ninja -j${cores} -l${cores}"
 # This causes aliases passed to the notify script to also
