@@ -51,7 +51,7 @@ alias cmake='cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias ccmake='ccmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias grep='grep --color'
 alias gca='git commit -a'
-alias gsa='git status'
+alias gsa='git status -sb'
 if test -d /sys/bus/cpu/devices; then
   cores=$(ls /sys/bus/cpu/devices | wc -w)
 else
