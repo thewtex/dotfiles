@@ -105,7 +105,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.Stack(num_stacks=2),
+    layout.Stack(num_stacks=2, autosplit=True),
     layout.TreeTab(name='tree'),
     layout.MonadTall(),
     layout.Max(name='max'),
