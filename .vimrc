@@ -35,11 +35,15 @@ au BufNewFile,BufRead *.txx set filetype=cpp
 au BufNewFile,BufRead *.cxx set filetype=cpp
 
 if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode" || &term =~ "builtin_gui" || $TERM == "dumb"
-        set t_Co=256
-        colorscheme molokayo
+  set t_Co=256
+  colorscheme molokayo
+  hi SyntasticError   ctermfg=235 ctermbg=218
+  hi SyntasticWarning ctermfg=015 ctermbg=062
 else
-        colorscheme desert
+  colorscheme desert
 endif
+
+
 
 call pathogen#infect()
 
