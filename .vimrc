@@ -144,6 +144,7 @@ if s:is_windows
 else
   nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<cr><c-u>
   nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<cr><c-u>
+  nnoremap <silent> [unite]g :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/git:!<cr><c-u>
 endif
 nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=recent file_mru<cr>
 nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
