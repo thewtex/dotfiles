@@ -33,6 +33,7 @@ let s:is_windows = has('win32') || has('win64')
 
 au BufNewFile,BufRead *.txx set filetype=cpp
 au BufNewFile,BufRead *.cxx set filetype=cpp
+au BufNewFile,BufRead *.wrap set filetype=cmake
 
 if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode" || &term =~ "builtin_gui" || $TERM == "dumb"
   set t_Co=256
