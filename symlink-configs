@@ -10,6 +10,7 @@ for config in .bashrc \
   .gnupg \
   .inputrc \
   .tmux.conf \
+  .tmux \
   .vim \
   .vimrc \
   .wgetrc \

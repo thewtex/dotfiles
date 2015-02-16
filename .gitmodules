@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/unite-outline"]
 	path = .vim/bundle/unite-outline
 	url = https://github.com/Shougo/unite-outline.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
