@@ -18,6 +18,13 @@ fi
 set -o vi
 shopt -s histappend
 
+macosx=false
+if $(which uname &> /dev/null); then
+  if test $(uname) = "Darwin"; then
+    macosx=true
+  fi
+fi
+
 ### Source functions ###
 [[ -f /etc/profile.d/bash-completion.sh ]] && \
   source /etc/profile.d/bash-completion.sh
@@ -54,6 +61,8 @@ alias gca='git commit -a'
 alias gsa='git status -sb'
 if test -d /sys/bus/cpu/devices; then
   cores=$(ls /sys/bus/cpu/devices | wc -w)
+elif $macosx; then
+  cores=$(sysctl -n hw.ncpu)
 else
   # Windows
   cores=$(wmic cpu get NumberOfCores | tail -n 2 | head -n 1)

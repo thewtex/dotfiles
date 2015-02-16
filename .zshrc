@@ -1,5 +1,12 @@
 #!/bin/zsh
 
+macosx=false
+if $(which uname &> /dev/null); then
+  if test $(uname) = "Darwin"; then
+    macosx=true
+  fi
+fi
+
 # keychain
 if test -e /usr/bin/keychain; then
   /usr/bin/keychain ~/.ssh/id_rsa
@@ -267,6 +274,8 @@ alias gca='git commit -a'
 alias gsa='git status -sb'
 if test -d /sys/bus/cpu/devices; then
   cores=$(ls /sys/bus/cpu/devices | wc -w)
+elif $macosx; then
+  cores=$(sysctl -n hw.ncpu)
 else
   # Windows
   cores=$(wmic cpu get NumberOfCores | tail -n 2 | head -n 1)
@@ -280,7 +289,9 @@ alias pyclewn='pyclewn --gdb=async,/tmp/pyclewn_project'
 alias wp='wgetpaste --nick thewtex -X'
 alias iv='ImageViewer'
 alias tmux='tmux -2 a -d || tmux -2'
-alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+if ! $macosx; then
+  alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+fi
 alias -s cxx=vim
 alias -s h=vim
 alias -s hxx=vim
