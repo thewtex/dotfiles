@@ -12,7 +12,6 @@ if test -e /usr/bin/keychain; then
   /usr/bin/keychain ~/.ssh/id_rsa
   HOSTNAME=$(hostname)
   . ~/.keychain/${HOSTNAME}-sh
-  . ~/.keychain/${HOSTNAME}-sh-gpg
 fi
 
 # tab completion
