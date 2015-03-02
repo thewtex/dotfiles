@@ -7,6 +7,8 @@ if $(which uname &> /dev/null); then
   fi
 fi
 
+GPG_TTY=$(tty)
+export GPG_TTY
 # keychain
 if test -e /usr/bin/keychain; then
   /usr/bin/keychain ~/.ssh/id_rsa

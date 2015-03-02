@@ -52,6 +52,8 @@ export LESS="$LESS -iJr"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 export PATH="${HOME}/bin/exe:${PATH}"
 PS1='\[\033[01;32m\]\u\[\033[00;34m\]@\[\033[01;35m\]\h\[\033[01;36m\] \w$(__git_ps1 " (%s)")\[\033[00;34m\]\$\[\033[00m\] '
+GPG_TTY=$(tty)
+export GPG_TTY
 
 ### Aliases ###
 alias cmake='cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
