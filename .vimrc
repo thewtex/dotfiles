@@ -120,6 +120,7 @@ map <leader>ma :mak<CR>
 "call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
 call unite#custom#source('line,outline','matchers','matcher_fuzzy')
+call unite#custom#source('file,file_rec,file_rec/async,grep', 'ignore_globs', ['.ExternalData/**', '.git/**'])
 call unite#custom#profile('default', 'context', {
       \ 'start_insert': 1,
       \ })
