@@ -1,6 +1,7 @@
 #!/bin/sh
 
 emerge \
+  app-text/tree \
   atool \
   awesome \
   bash-completion \

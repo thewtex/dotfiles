@@ -290,6 +290,10 @@ alias pyclewn='pyclewn --gdb=async,/tmp/pyclewn_project'
 alias wp='wgetpaste --nick thewtex -X'
 alias iv='ImageViewer'
 alias tmux='tmux -2 a -d || tmux -2'
+alias l='tree --dirsfirst --du -ChFL 1'
+alias l1='tree --dirsfirst --du -ChFL 1'
+alias l2='tree --dirsfirst --du -ChFL 2'
+alias l3='tree --dirsfirst --du -ChFL 3'
 if ! $macosx; then
   alias ls='ls --color=auto --human-readable --group-directories-first --classify'
 fi
