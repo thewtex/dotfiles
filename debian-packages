@@ -29,6 +29,7 @@ apt-get install \
   subversion \
   tig \
   tmux \
+  tree \
   vim-youcompleteme \
   valgrind \
   vim \
