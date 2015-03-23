@@ -29,4 +29,4 @@
 # git sed 's/old-method-name/new-method-name/ig'
 [alias]
 	sed = ! git grep -z --full-name -l '.' | xargs -0 sed -i -e
-
+        ln = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %cn - %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
