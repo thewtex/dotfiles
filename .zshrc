@@ -266,6 +266,9 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export LESS="$LESS -iJr"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 export PATH="${HOME}/bin/exe:${PATH}"
+if $macosx; then
+  export TERM=screen-256color
+fi
 
 # misc aliases
 alias cmake='cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
