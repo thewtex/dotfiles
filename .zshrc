@@ -139,6 +139,7 @@ setopt extendedglob
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 if [[ $#ZSH_HIGHLIGHT_MATCHING_BRACKETS_STYLES -eq 0 ]] &&
         . "$(for i in ${DEFAULTS:+${^DEFAULTS%/}/zsh{/zsh-syntax-highlighting,}} \
+                ${HOME}/.config/dotfiles/zsh-syntax-highlighting \
                 /usr/share/zsh/site-contrib{/zsh-syntax-highlighting,} \
                 $path
         do      j=$i/zsh-syntax-highlighting.zsh && [[ -f $j ]] && echo -nE $j && exit
