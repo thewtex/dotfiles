@@ -169,7 +169,6 @@ cursor_warp = False
 floating_layout = layout.Floating()
 auto_fullscreen = True
 wmname = "qtile"
-lazy.spawn("setxkbmap dvorak")
 
 @hook.subscribe.client_new
 def dialogs(window):
@@ -177,12 +176,12 @@ def dialogs(window):
         or window.window.get_wm_transient_for()):
         window.floating = True
 
-@hook.subscribe.startup
+@hook.subscribe.startup_once
 def startup():
     import subprocess
 
     # startup-script is simple a list of programs to run
     subprocess.Popen(['setxkbmap', 'dvorak'])
-    subprocess.Popen(['synaptiks'])
     subprocess.Popen(['/home/matt/.config/dotfiles/bin/synaptics.conf.sh'])
-    subprocess.Popen(['dbus-launch', 'nm-applet'])
+    subprocess.Popen(['urxvt'])
+    subprocess.Popen(['firefox'])
