@@ -166,7 +166,8 @@ main = None
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating()
+float_rules = [dict(wmclass='vtk')]
+floating_layout = layout.Floating(float_rules=float_rules)
 auto_fullscreen = True
 wmname = "qtile"
 
