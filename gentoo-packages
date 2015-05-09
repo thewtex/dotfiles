@@ -22,6 +22,7 @@ emerge \
   nemiver \
   dev-util/ninja \
   pdfgrep \
+  ptpython \
   pylint \
   pyqtgraph \
   pavucontrol \
