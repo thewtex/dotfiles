@@ -32,3 +32,5 @@
         ln = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %cn - %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [help]
 	autocorrect = 3
+[github]
+	user = thewtex
