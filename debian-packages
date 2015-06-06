@@ -17,6 +17,7 @@ apt-get install \
   gnupg2 \
   fonts-inconsolata \
   mosh \
+  ncurses-dev \
   nemiver \
   ninja-build \
   pdfgrep \
