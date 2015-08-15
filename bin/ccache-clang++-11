@@ -1,0 +1,2 @@
+#!/bin/sh
+CCACHE_CPP2=yes exec ccache clang++ --std=c++11 $(test -t 2 && echo -fcolor-diagnostics) "$@"
