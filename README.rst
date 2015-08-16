@@ -25,6 +25,8 @@ config setup
   ./directory-layout
   ./symlinks-config
 
+  cd /tmp/ && git clone https://github.com/ryanoasis/nerd-fonts && cd nerd-fonts && ./install.sh
+
 As *root*::
 
   ./gentoo-packages

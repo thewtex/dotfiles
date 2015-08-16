@@ -34,7 +34,8 @@ URxvt*reverseVideo: false
 URxvt*fading:	  20
 URxvt*scrollBar: false
 !URxvt*font:	  xft:Anonymous Pro:pixelsize=11:antialiasing=true
-URxvt*font:	  xft:Inconsolata:pixelsize=15:antialiasing=false
+!URxvt*font:	  xft:Inconsolata:pixelsize=15:antialiasing=false
+URxvt*font:	  xft:Inconsolata for Powerline Plus Nerd File Types Mono Plus Font Awesome Plus Octicons:pixelsize=15:antialiasing=false
 URxvt*transparent: true
 URxvt*shading: 16
 ! prevent wasted paper

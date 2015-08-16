@@ -21,7 +21,8 @@ set cinoptions={1s,:0,l1,g0,c0,(0,(s,m1 " ITK/VTK style indenting
 set hlsearch
 set incsearch
 set ignorecase smartcase " when searching, search pattern with an uppercase letter will only be case-sensitive
-set guifont=Inconsolata\ 10
+set encoding=utf8
+set guifont=Inconsolata\ for\ Powerline\ Plus\ Nerd\ File\ Types:h10
 set guioptions+=a
 " wrapping textwidth
 set history=500				" keep 50 lines of command history
