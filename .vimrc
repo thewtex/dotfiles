@@ -110,9 +110,9 @@ map! <C-F> <Esc>gUiw`]a
 " Pyclewn print variable under cursor.
 map <F10> :exe "Cprint " . expand("<cword>") <CR>
 
-map <leader>mj :mak -j8<CR>
+map <leader>mj :mak<CR>
 map <leader>me :mak test<CR>
-map <leader>ma :mak<CR>
+map <leader>ma :mak -j1<CR>
 
 " unite plugin mappings suggested here
 " http://bling.github.io//blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/
