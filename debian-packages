@@ -10,12 +10,15 @@ apt-get install \
   cppcheck \
   cgdb \
   ctags \
-  docker \
   keychain \
   python-flake8 \
   git \
   gnupg2 \
   fonts-inconsolata \
+  libexpat1-dev \
+  libfftw3-dev \
+  libhdf5-dev \
+  libjpeg-dev \
   mosh \
   ncurses-dev \
   nemiver \
