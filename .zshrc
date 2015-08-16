@@ -261,7 +261,6 @@ setopt nohashdirs
 # misc environmental variables
 export CCACHE_COMPRESS=1
 export EDITOR=/usr/bin/vim
-export ExternalData_OBJECT_STORES=${HOME}/data
 export GREP_COLOR="01;32"  # color grep matches green
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export LESS="$LESS -iJr"
