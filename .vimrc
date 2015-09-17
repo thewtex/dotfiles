@@ -36,9 +36,16 @@ au BufNewFile,BufRead *.txx set filetype=cpp
 au BufNewFile,BufRead *.cxx set filetype=cpp
 au BufNewFile,BufRead *.wrap set filetype=cmake
 
+call pathogen#infect()
+
 if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode" || &term =~ "builtin_gui" || $TERM == "dumb"
   set t_Co=256
-  colorscheme molokayo
+  "colorscheme molokayo
+  "https://github.com/morhetz/gruvbox/issues/43
+  let &t_ZH="\e[3m"
+  let &t_ZR="\e[23m"
+  let g:gruvbox_italic=1
+  colorscheme gruvbox
   hi SyntasticError   ctermfg=235 ctermbg=218
   hi SyntasticWarning ctermfg=015 ctermbg=062
 else
@@ -46,8 +53,6 @@ else
 endif
 
 let g:airline_powerline_fonts = 1
-
-call pathogen#infect()
 
 let g:syntastic_check_on_open = 0
 let g:syntastic_enable_signs = 1
