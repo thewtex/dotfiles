@@ -335,6 +335,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
+    { rule = { class = "shutter" },
+      properties = { floating = true } },
     { rule = { class = "Visualization Toolkit - OpenGL" },
       properties = { floating = true } },
     { rule = { name = "Visualization Toolkit - OpenGL", border_width=0 },
