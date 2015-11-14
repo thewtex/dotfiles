@@ -274,6 +274,7 @@ fi
 # misc aliases
 alias cmake='cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias ccmake='ccmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
+alias icmake='CC=ccache-clang CXX=ccache-clang++ cmake -G Ninja -DITK_USE_SYSTEM_LIBRARIES:BOOL=ON -DCMAKE_BUILD_TYPE=MinSizeRel -DBUILD_SHARED_LIBS:BOOL=ON -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias grep='grep --color'
 alias gca='git commit -a'
 alias gsa='git status -sb'
