@@ -9,7 +9,7 @@ trap 'rm -f $MYTEMP' SIGINT SIGTERM
 
 stripit() {
   echo "stripping $1"
-  sed 's/[\t]/  /' "$1" > $MYTEMP
+  sed 's/[\t]/  /g' "$1" > $MYTEMP
   cp $MYTEMP "$1"
 }
 
