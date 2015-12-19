@@ -1,26 +1,24 @@
 #!/bin/bash
 
-# strip trailing whitespaces from filenames sent to stdin or as args
-# Matt McCormick (thewtex) <matt@mmmccormick.com>
-# created 2008 May 01
+# Convert tabs to two spaces from filenames sent to stdin or as args
 
 MYTEMP=`tempfile`
 trap 'rm -f $MYTEMP' SIGINT SIGTERM
 
-stripit() {
-  echo "stripping $1"
+convertit() {
+  echo "converting $1"
   sed 's/[\t]/  /g' "$1" > $MYTEMP
   cp $MYTEMP "$1"
 }
 
 if [ $# -gt 0 ]; then
   while [ "$1" != "" ]; do
-    stripit $1
+    convertit $1
     shift
   done
 else
   while read; do
-    stripit $REPLY
+    convertit $REPLY
   done
 fi
 
