@@ -266,6 +266,7 @@ export GREP_COLOR="01;32"  # color grep matches green
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export LESS="$LESS -iJr"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
+PATH="${HOME}/.npm-global/bin:${PATH}"
 export PATH="${HOME}/bin/exe:${PATH}"
 if $macosx; then
   export TERM=screen-256color

@@ -4,3 +4,4 @@ mkdir -p ~/src
 mkdir -p ~/bin/exe
 mkdir -p ~/data
 mkdir -p ~/docs
+mkdir -p ~/.npm-global

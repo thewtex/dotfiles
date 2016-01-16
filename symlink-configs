@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cd ~
 for config in .bashrc \
@@ -41,3 +41,7 @@ fi
 
 cd ~/.vim/bundle/vimproc.vim
 make
+
+if type -p npm >/dev/null; then
+  npm config set prefix '~/.npm-global'
+fi
