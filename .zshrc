@@ -292,6 +292,7 @@ alias nj="ninja -j${cores} -l${cores}"
 # This causes aliases passed to the notify script to also
 # be expanded before being sent to the script.
 alias notify='notify '
+alias prettyjson='python -m json.tool'
 alias pyclewn='pyclewn --gdb=async,/tmp/pyclewn_project'
 alias wp='wgetpaste --nick thewtex -X'
 alias iv='ImageViewer'
