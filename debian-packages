@@ -34,7 +34,6 @@ apt-get install \
   tig \
   tmux \
   tree \
-  vim-youcompleteme \
   valgrind \
   vim \
   xclip \
