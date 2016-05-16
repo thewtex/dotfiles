@@ -1,8 +1,15 @@
+# -*- coding: utf-8 -*-
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
+import platform
 
 mod = "mod4"
+hostname = platform.node()
+num_screens = {
+    'clay': 2,
+    'meyer': 1
+}.get(hostname, 1)
 
 keys = [
     # Switch between windows in current stack pane
@@ -73,9 +80,32 @@ keys = [
         [mod, "shift"], "Return",
         lazy.layout.toggle_split()
     ),
+    Key(
+        [mod, "shift"], "l",
+        lazy.layout.client_to_next()
+    ),
+    Key(
+        [mod, "shift"], "h",
+        lazy.layout.client_to_previous()
+    ),
+
+    Key(
+        [mod, "shift"], "f",
+        lazy.window.toggle_floating()
+    ),
+Key(
+        [mod, "shift"], "1",
+        lazy.to_screen(0),
+        lazy.group.toscreen(0)
+    ),
+    Key(
+        [mod, "shift"], "2",
+        lazy.to_screen(1),
+        lazy.group.toscreen(1)
+    ),
 
     Key([mod], "Return", lazy.spawn("urxvt")),
-    Key([mod], "F10", lazy.spawn("import -window root /tmp/screeshot.png")),
+    Key([mod], "F10", lazy.spawn("import -window root /tmp/screenshot.png")),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.nextlayout()),
@@ -117,39 +147,86 @@ widget_defaults = dict(
     padding=3,
 )
 
-screens = [
-    Screen(
-        top=bar.Bar(
-            [
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Systray(),
-                widget.Notify(),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-            ],
-            30,
+if num_screens == 2:
+    screens = [
+        Screen(
+            top=bar.Bar(
+                [
+                    widget.GroupBox(),
+                    widget.Prompt(),
+                    widget.WindowName(),
+                    widget.Notify(),
+                    widget.CurrentScreen(),
+                    widget.CurrentLayout(),
+                    widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                ],
+                30,
+            ),
+            bottom=bar.Bar(
+                [
+                    widget.MemoryGraph(),
+                    widget.CPUGraph(),
+                    widget.NetGraph(),
+                    widget.HDDBusyGraph(),
+                    widget.Sep(),
+                    widget.BitcoinTicker(),
+                    widget.Spacer(),
+                    widget.YahooWeather( woeid='12769084', metric=False, format='{condition_text} {condition_temp}°{units_temperature} Chill={wind_chill}°{units_temperature} Hum={atmosphere_humidity}% Press={atmosphere_rising}{atmosphere_pressure}{units_pressure} Vis={atmosphere_visibility}{units_distance} Wind={wind_speed}{units_speed}@{wind_direction}°'),
+                    widget.DF(warn_space=30),
+                ],
+                30,
+            ),
         ),
-        bottom=bar.Bar(
-            [
-                widget.BatteryIcon(),
-                widget.MemoryGraph(),
-                widget.CPUGraph(),
-                widget.NetGraph(),
-                widget.HDDBusyGraph(),
-                widget.Sep(),
-                widget.BitcoinTicker(),
-                widget.Spacer(),
-                widget.YahooWeather(
-                    woeid='2375810',
-                    metric=False,
-                    format="  {astronomy_sunrise} sunrise, {astronomy_sunset} sunset  {condition_temp} deg {condition_text}"),
-                widget.DF(warn_space=30),
-            ],
-            30,
+        Screen(
+            top=bar.Bar(
+                [
+                    widget.GroupBox(),
+                    widget.Prompt(),
+                    widget.WindowName(),
+                    widget.Clipboard(timeout=None, width=bar.STRETCH, max_width=None),
+                    widget.Notify(),
+                    widget.CurrentScreen(),
+                    widget.CurrentLayout(),
+                    widget.Systray(),
+                ],
+                30,
+            ),
         ),
-    ),
-]
+    ]
+else:
+    screens = [
+        Screen(
+            top=bar.Bar(
+                [
+                    widget.GroupBox(),
+                    widget.Prompt(),
+                    widget.WindowName(),
+                    widget.Systray(),
+                    widget.Notify(),
+                    widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                ],
+                30,
+            ),
+            bottom=bar.Bar(
+                [
+                    widget.BatteryIcon(),
+                    widget.MemoryGraph(),
+                    widget.CPUGraph(),
+                    widget.NetGraph(),
+                    widget.HDDBusyGraph(),
+                    widget.Sep(),
+                    widget.BitcoinTicker(),
+                    widget.Spacer(),
+                    widget.YahooWeather(
+                        woeid='2375810',
+                        metric=False,
+                        format="  {astronomy_sunrise} sunrise, {astronomy_sunset} sunset  {condition_temp} deg {condition_text}"),
+                    widget.DF(warn_space=30),
+                ],
+                30,
+            ),
+        ),
+    ]
 
 # Drag floating layouts.
 mouse = [
@@ -182,7 +259,8 @@ def startup():
     import subprocess
 
     # startup-script is simple a list of programs to run
-    subprocess.Popen(['setxkbmap', 'dvorak'])
-    subprocess.Popen(['/home/matt/.config/dotfiles/bin/synaptics.conf.sh'])
+    if hostname == 'meyer':
+        subprocess.Popen(['setxkbmap', 'dvorak'])
+        subprocess.Popen(['/home/matt/.config/dotfiles/bin/synaptics.conf.sh'])
+        subprocess.Popen(['firefox'])
     subprocess.Popen(['urxvt'])
-    subprocess.Popen(['firefox'])
