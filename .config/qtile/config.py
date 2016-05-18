@@ -263,4 +263,5 @@ def startup():
         subprocess.Popen(['setxkbmap', 'dvorak'])
         subprocess.Popen(['/home/matt/.config/dotfiles/bin/synaptics.conf.sh'])
         subprocess.Popen(['firefox'])
+        subprocess.Popen(['nm-applet'])
     subprocess.Popen(['urxvt'])
