@@ -42,7 +42,7 @@ setopt correctall
 autoload -U promptinit
 promptinit
 prompt adam2
-. ${HOME}/.git_prompt.zsh
+#. ${HOME}/.git_prompt.zsh
 PURE_CMD_MAX_EXEC_TIME=2
 # Adapted from
 # Pure
@@ -109,7 +109,8 @@ prompt_pure_setup() {
 	add-zsh-hook precmd prompt_pure_precmd
 	add-zsh-hook preexec prompt_pure_preexec
 }
-prompt_pure_setup "$@"
+#prompt_pure_setup "$@"
+[[ $- = *i* ]] && [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
 
 # history
 export HISTSIZE=2000
@@ -296,7 +297,7 @@ alias prettyjson='python -m json.tool'
 alias pyclewn='pyclewn --gdb=async,/tmp/pyclewn_project'
 alias wp='wgetpaste --nick thewtex -X'
 alias iv='ImageViewer'
-alias tmux='tmux -2 a -d || tmux -2'
+#alias tmux='tmux -2 a -d || tmux -2'
 alias l='tree --dirsfirst --du -ChFL 1'
 alias l1='tree --dirsfirst --du -ChFL 1'
 alias l2='tree --dirsfirst --du -ChFL 2'
