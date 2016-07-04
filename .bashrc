@@ -40,9 +40,6 @@ source ~/.config/dotfiles/.bash_completion.d/git-prompt
 export CCACHE_COMPRESS=1
 export EDITOR=/usr/bin/vim
 export ExternalData_OBJECT_STORES=${HOME}/data
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-export GIT_PS1_SHOWUPSTREAM="verbose"
 export GREP_COLOR="01;32"  # color grep matches green
 export HISTTIMEFORMAT="%Y%m%d %H:%M: "
 export HISTCONTROL=ignoreboth
@@ -52,8 +49,8 @@ export LESS="$LESS -iJr"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 PATH="${HOME}/.npm-global/bin:${PATH}"
 export PATH="${HOME}/bin/exe:${PATH}"
-#PS1='\[\033[01;32m\]\u\[\033[00;34m\]@\[\033[01;35m\]\h\[\033[01;36m\] \w$(__git_ps1 " (%s)")\[\033[00;34m\]\$\[\033[00m\] '
-[[ $- = *i* ]] && [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
+export LP_RUNTIME_THRESHOLD=3
+[[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
 GPG_TTY=$(tty)
 export GPG_TTY
 

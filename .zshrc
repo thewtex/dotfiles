@@ -42,74 +42,7 @@ setopt correctall
 autoload -U promptinit
 promptinit
 prompt adam2
-#. ${HOME}/.git_prompt.zsh
-PURE_CMD_MAX_EXEC_TIME=2
-# Adapted from
-# Pure
-# by Sindre Sorhus
-# https://github.com/sindresorhus/pure
-# MIT License
-# turns seconds into human readable time
-# 165392 => 1d 21h 56m 32s
-prompt_pure_human_time() {
-	local tmp=$1
-	local days=$(( tmp / 60 / 60 / 24 ))
-	local hours=$(( tmp / 60 / 60 % 24 ))
-	local minutes=$(( tmp / 60 % 60 ))
-	local seconds=$(( tmp % 60 ))
-	(( $days > 0 )) && echo -n "${days}d "
-	(( $hours > 0 )) && echo -n "${hours}h "
-	(( $minutes > 0 )) && echo -n "${minutes}m "
-	echo "${seconds}s"
-}
-
-# displays the exec time of the last command if set threshold was exceeded
-prompt_pure_cmd_exec_time() {
-	local stop=$EPOCHSECONDS
-	local start=${cmd_timestamp:-$stop}
-	integer elapsed=$stop-$start
-	(($elapsed > ${PURE_CMD_MAX_EXEC_TIME:=5})) && prompt_pure_human_time $elapsed
-}
-
-prompt_pure_preexec() {
-	cmd_timestamp=$EPOCHSECONDS
-
-	# shows the current dir and executed command in the title when a process is active
-	print -Pn "\e]0;"
-	echo -nE "$PWD:t: $2"
-	print -Pn "\a"
-}
-
-prompt_pure_precmd() {
-	# shows the full path in the title
-        print -Pn '\e]0;%~\a'
-
-	local prompt_pure_preprompt=" %F{yellow}`prompt_pure_cmd_exec_time`%f"
-	print -P $prompt_pure_preprompt
-
-	# reset value since `preexec` isn't always triggered
-	unset cmd_timestamp
-}
-
-show_exit_status() {
-        print -P "%(?.%F{green}.%F{red}●)%f "
-}
-
-prompt_pure_setup() {
-	# prevent percentage showing up
-	# if output doesn't end with a newline
-	export PROMPT_EOL_MARK=''
-
-	prompt_opts=(cr subst percent)
-
-	zmodload zsh/datetime
-	autoload -Uz add-zsh-hook
-
-	add-zsh-hook precmd show_exit_status
-	add-zsh-hook precmd prompt_pure_precmd
-	add-zsh-hook preexec prompt_pure_preexec
-}
-#prompt_pure_setup "$@"
+export LP_RUNTIME_THRESHOLD=3
 [[ $- = *i* ]] && [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
 
 # history
