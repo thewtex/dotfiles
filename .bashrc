@@ -81,7 +81,7 @@ alias wp='wgetpaste --nick thewtex -X'
 alias iv='ImageViewer'
 # for pyclewn
 alias mq='hg -R $(hg root)/.hg/patches'
-alias tmux='tmux -2 a -d || tmux -2'
+#alias tmux='tmux -2 a -d || tmux -2'
 
 function aunpack() {
   local TMP=$(mktemp /tmp/aunpack.XXXXXXXXXX)
