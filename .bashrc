@@ -53,6 +53,9 @@ export LP_RUNTIME_THRESHOLD=3
 [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
 GPG_TTY=$(tty)
 export GPG_TTY
+[[ -e /usr/bin/virtualenvwrapper.sh ]] && source /usr/bin/virtualenvwrapper_lazy.sh
+export WORKON_HOME=${HOME}/bin/venvs/
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
 
 ### Aliases ###
 alias cmake='cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '

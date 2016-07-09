@@ -33,6 +33,7 @@ emerge \
   the_silver_searcher \
   tig \
   valgrind \
+  virtualenvwrapper \
   x11-misc/xclip \
   zsh \
   zsh-completions \

@@ -205,6 +205,9 @@ export PATH="${HOME}/bin/exe:${PATH}"
 if $macosx; then
   export TERM=screen-256color
 fi
+[[ -e /usr/bin/virtualenvwrapper.sh ]] && source /usr/bin/virtualenvwrapper_lazy.sh
+export WORKON_HOME=${HOME}/bin/venvs/
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
 
 # misc aliases
 alias cmake='cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '

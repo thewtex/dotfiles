@@ -36,5 +36,7 @@ apt-get install \
   tree \
   valgrind \
   vim \
+  vim-nox \
+  virtualenvwrapper \
   xclip \
   zsh
