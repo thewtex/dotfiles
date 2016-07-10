@@ -53,7 +53,8 @@ export LP_RUNTIME_THRESHOLD=3
 [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
 GPG_TTY=$(tty)
 export GPG_TTY
-[[ -e /usr/bin/virtualenvwrapper.sh ]] && source /usr/bin/virtualenvwrapper_lazy.sh
+[[ -e /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh ]] && source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
+[[ -e /usr/bin/virtualenvwrapper_lazy.sh ]] && source /usr/bin/virtualenvwrapper_lazy.sh
 export WORKON_HOME=${HOME}/bin/venvs/
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
 
