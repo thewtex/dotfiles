@@ -259,7 +259,7 @@ def startup():
     import subprocess
 
     # startup-script is simple a list of programs to run
-    if hostname == 'meyer':
+    if hostname == 'ethan':
         subprocess.Popen(['setxkbmap', 'dvorak'])
         subprocess.Popen(['/home/matt/.config/dotfiles/bin/synaptics.conf.sh'])
         subprocess.Popen(['firefox'])
