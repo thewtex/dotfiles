@@ -10,6 +10,7 @@ apt-get install \
   cppcheck \
   cgdb \
   ctags \
+  curl \
   keychain \
   python-flake8 \
   git \
