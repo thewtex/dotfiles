@@ -59,6 +59,17 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_mode_map = { 'mode' : 'active', 'active_filetype': ['cpp', 'python'] }
 let g:syntastic_cpp_checkers = [ 'cppcheck' ]
 let g:syntastic_python_checkers = [ 'pyflakes', 'pylint' ]
+let g:syntastic_asciidoc_checkers = [ 'proselint' ]
+let g:syntastic_help_checkers = [ 'proselint' ]
+let g:syntastic_html_checkers = [ 'proselint' ]
+let g:syntastic_markdown_checkers = [ 'proselint' ]
+let g:syntastic_nroff_checkers = [ 'proselint' ]
+let g:syntastic_pod_checkers = [ 'proselint' ]
+let g:syntastic_rst_checkers = [ 'proselint' ]
+let g:syntastic_tex_checkers = [ 'proselint' ]
+let g:syntastic_texinfo_checkers = [ 'proselint' ]
+let g:syntastic_text_checkers = [ 'proselint' ]
+let g:syntastic_xhtml_checkers = [ 'proselint' ]
 "let g:syntastic_debug_file = '/tmp/syntastic_debug.log'
 " 1 - trace checker calls
 " 2 - dump loclists
