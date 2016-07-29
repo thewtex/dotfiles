@@ -88,3 +88,24 @@
 [submodule "liquidprompt"]
 	path = liquidprompt
 	url = https://github.com/nojhan/liquidprompt.git
+[submodule ".tmux/plugins/tmux-copycat"]
+	path = .tmux/plugins/tmux-copycat
+	url = https://git::@github.com/tmux-plugins/tmux-copycat
+[submodule ".tmux/plugins/tmux-resurrect"]
+	path = .tmux/plugins/tmux-resurrect
+	url = https://git::@github.com/tmux-plugins/tmux-resurrect
+[submodule ".tmux/plugins/tmux-continuum"]
+	path = .tmux/plugins/tmux-continuum
+	url = https://git::@github.com/tmux-plugins/tmux-continuum
+[submodule ".tmux/plugins/tmux-net-speed"]
+	path = .tmux/plugins/tmux-net-speed
+	url = https://github.com/beeryardtech/tmux-net-speed
+[submodule ".tmux/plugins/tmux-yank"]
+	path = .tmux/plugins/tmux-yank
+	url = https://git::@github.com/tmux-plugins/tmux-yank
+[submodule ".tmux/plugins/tmux-open"]
+	path = .tmux/plugins/tmux-open
+	url = https://git::@github.com/tmux-plugins/tmux-open
+[submodule ".tmux/plugins/tmux-prefix-highlight"]
+	path = .tmux/plugins/tmux-prefix-highlight
+	url = https://github.com/tmux-plugins/tmux-prefix-highlight.git
