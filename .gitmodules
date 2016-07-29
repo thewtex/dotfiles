@@ -109,3 +109,6 @@
 [submodule ".tmux/plugins/tmux-prefix-highlight"]
 	path = .tmux/plugins/tmux-prefix-highlight
 	url = https://github.com/tmux-plugins/tmux-prefix-highlight.git
+[submodule ".vim/bundle/ranger.vim"]
+	path = .vim/bundle/ranger.vim
+	url = https://github.com/francoiscabrol/ranger.vim.git
