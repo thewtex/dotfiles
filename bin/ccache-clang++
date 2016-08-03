@@ -1,2 +1,2 @@
 #!/bin/sh
-CCACHE_CPP2=yes exec ccache clang++ $(test -t 2 && echo -fcolor-diagnostics) "$@"
+CCACHE_CPP2=yes exec ccache clang++ -fcolor-diagnostics "$@"

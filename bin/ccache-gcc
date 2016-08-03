@@ -1,2 +1,2 @@
 #!/bin/sh
-exec /usr/bin/ccache gcc "$@"
+exec /usr/bin/ccache gcc -fdiagnostics-color "$@"
