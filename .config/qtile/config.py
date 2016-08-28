@@ -262,6 +262,7 @@ def startup():
     if hostname == 'ethan':
         subprocess.Popen(['setxkbmap', 'dvorak'])
         subprocess.Popen(['/home/matt/.config/dotfiles/bin/synaptics.conf.sh'])
+        subprocess.Popen(['/home/matt/.config/dotfiles/bin/bind-unencrypted.sh'])
         subprocess.Popen(['firefox'])
         subprocess.Popen(['nm-applet'])
         subprocess.Popen(['prime-indicator'])
