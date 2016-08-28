@@ -12,7 +12,7 @@
 	name = Matt McCormick
 	email = matt.mccormick@kitware.com
 [merge]
-	tool = vimdiff
+	tool = meld
 [clean]
 	requireFore = false
 	requireForce = false
