@@ -70,6 +70,7 @@ let g:syntastic_tex_checkers = [ 'proselint' ]
 let g:syntastic_texinfo_checkers = [ 'proselint' ]
 let g:syntastic_text_checkers = [ 'proselint' ]
 let g:syntastic_xhtml_checkers = [ 'proselint' ]
+let g:syntastic_javascript_checkers = ['standard']
 "let g:syntastic_debug_file = '/tmp/syntastic_debug.log'
 " 1 - trace checker calls
 " 2 - dump loclists
@@ -87,6 +88,9 @@ let g:ycm_server_keep_logfiles = 1
 "error
 "critical
 let g:ycm_server_log_level = 'warning'
+
+autocmd bufwritepost *.js silent !standard-format -w %
+set autoread
 
 " lhs comments
 map ,# :s/^/#/<CR>:nohlsearch<CR>

@@ -9,6 +9,7 @@ for config in .bashrc \
   .git_prompt.zsh \
   .gnupg \
   .inputrc \
+  .tern-project \
   .tmux.conf \
   .tmux \
   .vim \

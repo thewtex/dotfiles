@@ -1,0 +1,15 @@
+{
+  "libs": [
+    "browser",
+    "chai"
+  ],
+  "loadEagerly": [
+    "src/*.js"
+  ],
+  "dontLoad": [
+    "dist/**/*.js"
+  ],
+  "plugins": {
+    "node": {}
+  }
+}
