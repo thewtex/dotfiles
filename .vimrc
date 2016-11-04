@@ -45,12 +45,20 @@ if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == 
   let &t_ZH="\e[3m"
   let &t_ZR="\e[23m"
   let g:gruvbox_italic=1
-  colorscheme gruvbox
+  "colorscheme gruvbox
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+  " The default is 256
+  "let g:onedark_termcolors=16
+  colorscheme onedark
   hi SyntasticError   ctermfg=235 ctermbg=218
   hi SyntasticWarning ctermfg=015 ctermbg=062
 else
-  colorscheme desert
+  let g:onedark_termcolors=16
+  "colorscheme desert
 endif
+colorscheme onedark
 
 let g:airline_powerline_fonts = 1
 
