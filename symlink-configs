@@ -40,7 +40,7 @@ if test ! -e .tmux.local.conf; then
   cp ~/.config/dotfiles/.tmux.local.conf .
 fi
 
-cd ~/.vim/bundle/vimproc.vim
+cd ~/.vim/bundle/vimproc.vim/
 make
 
 if type -p npm >/dev/null; then
