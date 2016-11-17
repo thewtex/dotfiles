@@ -64,7 +64,9 @@ alias ccmake='ccmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias grep='grep --color'
 alias gca='git commit -a'
 alias gsa='git status -sb'
-if test -d /sys/bus/cpu/devices; then
+if type nproc > /dev/null; then
+  cores=$(nproc)
+elif test -d /sys/bus/cpu/devices; then
   cores=$(ls /sys/bus/cpu/devices | wc -w)
 elif $macosx; then
   cores=$(sysctl -n hw.ncpu)

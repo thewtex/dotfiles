@@ -10,10 +10,13 @@ fi
 GPG_TTY=$(tty)
 export GPG_TTY
 # keychain
-if test -e /usr/bin/keychain; then
-  /usr/bin/keychain ~/.ssh/id_rsa
-  HOSTNAME=$(hostname)
-  . ~/.keychain/${HOSTNAME}-sh
+if test -e /home/matt/bin/exe/keychain; then
+  /home/matt/bin/exe/keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 654A512B
+  [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
+  [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
+    . $HOME/.keychain/$HOSTNAME-sh
+  [ -f $HOME/.keychain/$HOSTNAME-sh-gpg ] && \
+    . $HOME/.keychain/$HOSTNAME-sh-gpg
 fi
 
 # tab completion
@@ -217,7 +220,9 @@ alias icmake='CC=ccache-clang CXX=ccache-clang++ cmake -G Ninja -DITK_USE_CCACHE
 alias grep='grep --color'
 alias gca='git commit -a'
 alias gsa='git status -sb'
-if test -d /sys/bus/cpu/devices; then
+if type nproc > /dev/null; then
+  cores=$(nproc)
+elif test -d /sys/bus/cpu/devices; then
   cores=$(ls /sys/bus/cpu/devices | wc -w)
 elif $macosx; then
   cores=$(sysctl -n hw.ncpu)
