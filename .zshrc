@@ -205,7 +205,7 @@ export LESS="$LESS -iJr"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 PATH="${HOME}/.npm-global/bin:${PATH}"
 export PATH="${HOME}/bin/exe:${PATH}"
-if $macosx; then
+if $macosx || [ -n "$NIX_PROFILES" ]; then
   export TERM=screen-256color
 fi
 [[ -e /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh ]] && source /usr/share/virtualenvwrapper/virtualenvwrapper_lazy.sh
