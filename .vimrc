@@ -38,18 +38,20 @@ au BufNewFile,BufRead *.wrap set filetype=cmake
 
 call pathogen#infect()
 
-if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode" || &term =~ "builtin_gui" || $TERM == "dumb"
-  set t_Co=256
+if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode-256color" || &term =~ "builtin_gui" || $TERM == "dumb"
+  "set t_Co=256
   "colorscheme molokayo
   "https://github.com/morhetz/gruvbox/issues/43
   let &t_ZH="\e[3m"
   let &t_ZR="\e[23m"
   let g:gruvbox_italic=1
-  "colorscheme gruvbox
   if (has("termguicolors"))
     set termguicolors
   endif
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
   " The default is 256
+  "colorscheme gruvbox
   "let g:onedark_termcolors=16
   colorscheme onedark
   hi SyntasticError   ctermfg=235 ctermbg=218
