@@ -119,11 +119,6 @@ function pps() {
   ps -eF | grep "$@" | grep --colour=auto -v 'grep';
 }
 
-ranger() {
-  command ranger --fail-unless-cd $@ &&
-  cd "$(grep \^\' ~/.ranger/bookmarks | cut -b3-)"
-}
-
 function x() {
   echo $1 | xclip ;
 }
