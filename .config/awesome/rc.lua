@@ -374,9 +374,11 @@ awful.rules.rules = {
       properties = { floating = true } },
      --Set Firefox to always map on tags number 3 of screen 1.
      { rule = { class = "Firefox" },
-       properties = { tag = tags[1][3] } },
+       properties = { tag = tags[1][2] } },
      { rule = { class = "Chromium-browser" },
-       properties = { tag = tags[1][4] } },
+       properties = { tag = tags[1][3] } },
+     { rule = { class = "google-chrome" },
+       properties = { tag = tags[1][3] } },
 }
 -- }}}
 
