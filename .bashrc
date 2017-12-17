@@ -48,6 +48,7 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export LESS="$LESS -iJr"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 PATH="${HOME}/.npm-global/bin:${PATH}"
+PATH="${HOME}/.cargo/bin:${PATH}"
 export PATH="${HOME}/bin/exe:${PATH}"
 export LP_RUNTIME_THRESHOLD=3
 [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt

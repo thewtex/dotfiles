@@ -204,6 +204,7 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export LESS="$LESS -iJr"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 PATH="${HOME}/.npm-global/bin:${PATH}"
+PATH="${HOME}/.cargo/bin:${PATH}"
 export PATH="${HOME}/bin/exe:${PATH}"
 if $macosx || [ -n "$NIX_PROFILES" ]; then
   export TERM=screen-256color
