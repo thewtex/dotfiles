@@ -281,3 +281,8 @@ function x() {
 function bat() {
   upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage";
 }
+
+function ris2bib() {
+  # utilities from the bibutils package
+  ris2xml $1 | xml2bib -b > $(basename $1 .ris).bib
+}
