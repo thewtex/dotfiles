@@ -112,3 +112,6 @@
 [submodule ".vim/bundle/ranger.vim"]
 	path = .vim/bundle/ranger.vim
 	url = https://github.com/francoiscabrol/ranger.vim.git
+[submodule ".vim/bundle/vim-prettier"]
+	path = .vim/bundle/vim-prettier
+	url = https://github.com/prettier/vim-prettier
