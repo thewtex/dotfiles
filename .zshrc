@@ -10,8 +10,8 @@ fi
 GPG_TTY=$(tty)
 export GPG_TTY
 # keychain
-if test -e /home/matt/bin/exe/keychain; then
-  /home/matt/bin/exe/keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 654A512B
+if test -e /usr/bin/keychain; then
+  /usr/bin/keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 654A512B
   [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
   [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
     . $HOME/.keychain/$HOSTNAME-sh
@@ -217,7 +217,7 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
 # misc aliases
 alias cmake='cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias ccmake='ccmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
-alias icmake='CC=ccache-clang CXX=ccache-clang++ cmake -G Ninja -DITK_USE_CCACHE=1 -DITK_USE_SYSTEM_LIBRARIES:BOOL=ON -DCMAKE_BUILD_TYPE=MinSizeRel -DBUILD_SHARED_LIBS:BOOL=ON -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
+alias icmake='CC=ccache-clang CXX=ccache-clang++ cmake -G Ninja -DITK_USE_CCACHE=1 -DITK_USE_SYSTEM_LIBRARIES:BOOL=ON -DITK_USE_SYSTEM_HDF5:BOOL=OFF -DITK_USE_SYSTEM_GOOGLETEST=OFF -DCMAKE_BUILD_TYPE=MinSizeRel -DBUILD_SHARED_LIBS:BOOL=ON -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias grep='grep --color'
 alias gca='git commit -a'
 alias gsa='git status -sb'
