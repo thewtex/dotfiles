@@ -115,3 +115,6 @@
 [submodule ".vim/bundle/vim-prettier"]
 	path = .vim/bundle/vim-prettier
 	url = https://github.com/prettier/vim-prettier
+[submodule "powerlevel9k"]
+	path = powerlevel9k
+	url = https://github.com/bhilburn/powerlevel9k.git

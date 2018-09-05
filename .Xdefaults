@@ -35,7 +35,8 @@ URxvt*fading:	  20
 URxvt*scrollBar: false
 !URxvt*font:	  xft:Anonymous Pro:pixelsize=11:antialiasing=true
 !URxvt*font:	  xft:Inconsolata:pixelsize=13:antialiasing=false
-URxvt*font:	  xft:InconsolataForPowerline NF:pixelsize=19:antialiasing=true
+!URxvt*font:	  xft:InconsolataForPowerline NF:pixelsize=17:antialiasing=true
+URxvt*font:	  xft:Hack:size=8
 URxvt*transparent: true
 URxvt*shading: 16
 ! prevent wasted paper

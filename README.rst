@@ -26,6 +26,7 @@ config setup
   ./symlinks-config
 
   cd /tmp/ && git clone --depth 1 https://github.com/ryanoasis/nerd-fonts && cd nerd-fonts && ./install.sh
+  cd /tmp/ && git clone --depth 1 https://github.com/powerline/fonts && ./install.sh
 
 As *root*::
 

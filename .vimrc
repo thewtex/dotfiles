@@ -99,10 +99,10 @@ let g:ycm_server_keep_logfiles = 1
 "critical
 let g:ycm_server_log_level = 'warning'
 
-autocmd bufwritepost *.js silent !standard-format -w %
 let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#arrow_parens = 'always'
 let g:prettier#config#bracket_spacing = 'true'
+"autocmd bufwritepost *.js silent !standard-format -w %
 set autoread
 
 " lhs comments

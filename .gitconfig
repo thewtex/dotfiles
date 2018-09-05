@@ -30,7 +30,17 @@
 [alias]
 	sed = ! git grep -z --full-name -l '.' | xargs -0 sed -i -e
         ln = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %cn - %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	ci = !hub ci-status
+	browse = !hub browse
+	compare = !hub compare
 [help]
 	autocorrect = 3
 [github]
 	user = thewtex
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	gpgsign = false

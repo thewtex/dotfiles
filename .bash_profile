@@ -5,3 +5,5 @@ if test -e /usr/bin/keychain; then
 fi
 
 source ~/.bashrc
+
+export PATH="$HOME/.cargo/bin:$PATH"
