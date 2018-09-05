@@ -54,6 +54,7 @@ export LP_RUNTIME_THRESHOLD=3
 #[[ $- = *i* ]] && [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(battery dir dir_writable vcs virtualenv vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs history time)
+POWERLEVEL9K_MODE='nerdfont-complete'
 [[ $- = *i* ]] && [[ -e ~/.config/dotfiles/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/.config/dotfiles/powerlevel9k/powerlevel9k.zsh-theme
 
 # history
@@ -295,9 +296,5 @@ function ris2bib() {
   ris2xml $1 | xml2bib -b > $(basename $1 .ris).bib
 }
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/matt/.nvm/versions/node/v6.10.3/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/matt/.nvm/versions/node/v6.10.3/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/matt/.nvm/versions/node/v6.10.3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/matt/.nvm/versions/node/v6.10.3/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

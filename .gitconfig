@@ -43,4 +43,4 @@
 	process = git-lfs filter-process
 	required = true
 [commit]
-	gpgsign = false
+	gpgsign = true
