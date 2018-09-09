@@ -118,3 +118,6 @@
 [submodule "powerlevel9k"]
 	path = powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
+[submodule ".vim/bundle/committia"]
+	path = .vim/bundle/committia
+	url = https://github.com/rhysd/committia.vim
