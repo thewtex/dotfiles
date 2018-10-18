@@ -53,8 +53,12 @@ prompt adam2
 export LP_RUNTIME_THRESHOLD=3
 #[[ $- = *i* ]] && [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(battery dir dir_writable vcs virtualenv vi_mode)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs history time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator history time)
 POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=8
+#POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes) # git-untracked git-aheadbehind git-stash git-remotebranch git-tagname)
+POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind git-remotebranch) # git-tagname)
 [[ $- = *i* ]] && [[ -e ~/.config/dotfiles/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/.config/dotfiles/powerlevel9k/powerlevel9k.zsh-theme
 
 # history
