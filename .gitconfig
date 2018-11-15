@@ -30,6 +30,8 @@
 [alias]
 	sed = ! git grep -z --full-name -l '.' | xargs -0 sed -i -e
         ln = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %cn - %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+        delete-merged = "!git branch --merged | grep  -v '\\*\\|master\\|develop\\|release\\|release-4.13' | xargs -n 1 git branch -d"
+        fixup = "!REV=$(git rev-parse $1) && git commit -n --fixup $REV && (GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash --autostash $REV^ || (git diff && git rebase --abort && git reset --soft HEAD^ && echo "Rebase aborted")) #"
 	ci = !hub ci-status
 	browse = !hub browse
 	compare = !hub compare
