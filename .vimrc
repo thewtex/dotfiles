@@ -98,6 +98,7 @@ let g:ycm_server_keep_logfiles = 1
 "error
 "critical
 let g:ycm_server_log_level = 'warning'
+let g:ycm_rust_src_path="/home/matt/src/rust/src/"
 
 let g:prettier#config#trailing_comma = 'es5'
 let g:prettier#config#arrow_parens = 'always'
