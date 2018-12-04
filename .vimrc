@@ -38,6 +38,9 @@ au BufNewFile,BufRead *.wrap set filetype=cmake
 
 call pathogen#infect()
 
+set rtp+=~/.fzf
+nnoremap <leader>e :FZF<CR>
+
 if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode-256color" || &term =~ "builtin_gui" || $TERM == "dumb"
   "set t_Co=256
   "colorscheme molokayo
