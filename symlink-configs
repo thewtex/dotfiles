@@ -12,6 +12,7 @@ for config in .bashrc \
   .tern-project \
   .tmux.conf \
   .tmux \
+  .p10k.zsh \
   .vim \
   .vimrc \
   .wgetrc \

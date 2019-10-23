@@ -59,7 +59,8 @@ POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_CHANGESET_HASH_LENGTH=8
 #POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes) # git-untracked git-aheadbehind git-stash git-remotebranch git-tagname)
 POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind git-remotebranch) # git-tagname)
-[[ $- = *i* ]] && [[ -e ~/.config/dotfiles/powerlevel9k/powerlevel9k.zsh-theme ]] && source ~/.config/dotfiles/powerlevel9k/powerlevel9k.zsh-theme
+[[ $- = *i* ]] && [[ -e ~/.config/dotfiles/powerlevel10k/powerlevel10k.zsh-theme ]] && source ~/.config/dotfiles/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # history
 export HISTSIZE=2000

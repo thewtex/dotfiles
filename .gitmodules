@@ -115,9 +115,6 @@
 [submodule ".vim/bundle/vim-prettier"]
 	path = .vim/bundle/vim-prettier
 	url = https://github.com/prettier/vim-prettier
-[submodule "powerlevel9k"]
-	path = powerlevel9k
-	url = https://github.com/bhilburn/powerlevel9k.git
 [submodule ".vim/bundle/committia"]
 	path = .vim/bundle/committia
 	url = https://github.com/rhysd/committia.vim
@@ -130,3 +127,9 @@
 [submodule ".vim/bundle/gv.vim"]
 	path = .vim/bundle/gv.vim
 	url = https://github.com/junegunn/gv.vim.git
+[submodule ".vim/bundle/vim-clang-format"]
+	path = .vim/bundle/vim-clang-format
+	url = https://github.com/rhysd/vim-clang-format
+[submodule "powerlevel10k"]
+	path = powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k
