@@ -3,9 +3,7 @@
 apt-get install \
   atool \
   awesome \
-  bash-completion \
   ccache \
-  cdargs \
   clang \
   cppcheck \
   cgdb \
@@ -31,8 +29,6 @@ apt-get install \
   pavucontrol \
   ranger \
   rxvt-unicode-256color \
-  silversearcher-ag \
-  subversion \
   tig \
   tmux \
   tree \
