@@ -11,7 +11,7 @@ GPG_TTY=$(tty)
 export GPG_TTY
 # keychain
 if test -e /usr/bin/keychain; then
-  /usr/bin/keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 654A512B
+  /usr/bin/keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 2E6EE54E654A512B
   [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
   [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
     . $HOME/.keychain/$HOSTNAME-sh
