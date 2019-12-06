@@ -133,3 +133,9 @@
 [submodule "powerlevel10k"]
 	path = powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k
+[submodule ".vim/bundle/vim-rainbow"]
+	path = .vim/bundle/vim-rainbow
+	url = https://github.com/frazrepo/vim-rainbow
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
