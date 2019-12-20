@@ -185,6 +185,8 @@ endif
 nmap <space> [unite]
 nnoremap [unite] <nop>
 
+let g:rainbow_active = 1
+
 if s:is_windows
   nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec:! buffer file_mru bookmark<cr><c-u>
   nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec:!<cr><c-u>
