@@ -16,7 +16,7 @@ set expandtab
 set autoindent
 set autowrite
 set matchpairs+=<:> " To mach arguments of templates
-set cinoptions={1s,:0,l1,g0,c0,(0,(s,m1 " ITK/VTK style indenting
+set cinoptions={0,:0,l1,g0,c0,(0,(s,m1 " ITK/VTK style indenting
 " highlight search
 set hlsearch
 set incsearch
