@@ -292,7 +292,7 @@ function x() {
   echo $1 | xclip ;
 }
 
-function bat() {
+function battery() {
   upower -i $(upower -e | grep 'BAT') | grep -E "state|to\ full|percentage";
 }
 

@@ -39,7 +39,22 @@ au BufNewFile,BufRead *.wrap set filetype=cmake
 call pathogen#infect()
 
 set rtp+=~/.fzf
-nnoremap <leader>e :FZF<CR>
+"https://github.com/junegunn/fzf.vim
+"nnoremap <leader>e :FZF<CR>
+":Files [PATH]
+nnoremap <leader>o :Files<CR>
+nnoremap <leader>e :GFiles<CR>
+nnoremap <leader>g :GFiles?<CR>
+":Colors
+nnoremap <leader>a :Lines<CR>
+nnoremap <leader>b :BLines<CR>
+nnoremap <leader>t :Tags<CR>
+nnoremap <leader>h :BTags<CR>
+nnoremap <leader>q :History<CR>
+nnoremap <leader>j :History:<CR>
+nnoremap <leader>k :History/<CR>
+nnoremap <leader>r :Rg<CR>
+nnoremap <leader>be :Buffers<CR>
 
 if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode-256color" || &term =~ "builtin_gui" || $TERM == "dumb"
   "set t_Co=256
