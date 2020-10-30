@@ -30,7 +30,8 @@ done
 
 cd ~/.config
 for config in awesome \
-  qtile
+  qtile \
+  nvim
   do
   if test ! -d $config; then
     ln -s ~/.config/dotfiles/.config/$config
