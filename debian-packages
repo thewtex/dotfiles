@@ -9,8 +9,9 @@ apt-get install \
   cgdb \
   ctags \
   curl \
+  fd-find \
+  fonts-firacode \
   keychain \
-  python-flake8 \
   git \
   gnupg2 \
   fonts-inconsolata \
@@ -19,13 +20,13 @@ apt-get install \
   libhdf5-dev \
   libjpeg-dev \
   mosh \
+  nvtop \
   ncurses-dev \
   nemiver \
   ninja-build \
   pdfgrep \
   pinentry-curses \
   pylint \
-  python-pyqtgraph \
   pavucontrol \
   ranger \
   rxvt-unicode-256color \
@@ -33,8 +34,13 @@ apt-get install \
   tmux \
   tree \
   valgrind \
-  vim \
-  vim-nox \
-  virtualenvwrapper \
+  neovim \
   xclip \
   zsh
+
+update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
+update-alternatives --config vi
+update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
+update-alternatives --config vim
+update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
+update-alternatives --config editor
