@@ -16,9 +16,6 @@
 [submodule ".vim/bundle/vim-trailing-whitespace"]
 	path = .vim/bundle/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
-[submodule ".vim/bundle/unite"]
-	path = .vim/bundle/unite
-	url = https://github.com/Shougo/unite.vim.git
 [submodule ".vim/bundle/undotree"]
 	path = .vim/bundle/undotree
 	url = https://github.com/mbbill/undotree.git
@@ -43,9 +40,6 @@
 [submodule ".vim/bundle/neomru.vim"]
 	path = .vim/bundle/neomru.vim
 	url = https://github.com/Shougo/neomru.vim.git
-[submodule ".vim/bundle/unite-outline"]
-	path = .vim/bundle/unite-outline
-	url = https://github.com/Shougo/unite-outline.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
