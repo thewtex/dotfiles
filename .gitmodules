@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/csapprox"]
 	path = .vim/bundle/csapprox
 	url = https://github.com/godlygeek/csapprox.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree
 [submodule ".vim/bundle/nerdcommenter"]
 	path = .vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
@@ -58,9 +55,6 @@
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
 	url = https://github.com/bling/vim-airline
-[submodule ".vim/bundle/nerdtree-git-plugin"]
-	path = .vim/bundle/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
 [submodule ".vim/bundle/vim-devicons"]
 	path = .vim/bundle/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
