@@ -46,10 +46,6 @@ fi
 cd ~/.vim/bundle/vimproc.vim/
 make
 
-if type -p npm >/dev/null; then
-  npm config set prefix '~/.npm-global'
-fi
-
 mkdir -p ~/.local/share/fonts
 #if [[ ! -e "Inconsolata for Powerline Nerd Font Complete Mono Windows Compatible.otf" ]]; then
   #cd ~/.local/share/fonts

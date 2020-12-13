@@ -15,10 +15,13 @@ apt-get install \
   git \
   gnupg2 \
   fonts-inconsolata \
+  libeigen3-dev \
   libexpat1-dev \
   libfftw3-dev \
   libhdf5-dev \
   libjpeg-dev \
+  libpng-dev \
+  libtiff-dev \
   mosh \
   nvtop \
   ncurses-dev \

@@ -46,3 +46,5 @@
 	required = true
 [commit]
 	gpgsign = true
+[sequence]
+	editor = interactive-rebase-tool

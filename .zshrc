@@ -216,6 +216,8 @@ export ExternalData_OBJECT_STORES=${HOME}/data
 export GREP_COLOR="01;32"  # color grep matches green
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export LESS="$LESS -iJr"
+export GEM_HOME="${HOME}/bin/gems"
+export PATH="${PATH}:${GEM_HOME}/bin"
 PATH="${HOME}/.config/dotfiles/bin:${PATH}"
 PATH="${HOME}/.npm-global/bin:${PATH}"
 PATH="${HOME}/.cargo/bin:${PATH}"
@@ -255,13 +257,17 @@ alias pyclewn='pyclewn --gdb=async,/tmp/pyclewn_project'
 alias wp='wgetpaste --nick thewtex -X'
 alias iv='ImageViewer'
 #alias tmux='tmux -2 a -d || tmux -2'
-alias l='tree --dirsfirst --du -ChFL 1'
-alias l1='tree --dirsfirst --du -ChFL 1'
-alias l2='tree --dirsfirst --du -ChFL 2'
-alias l3='tree --dirsfirst --du -ChFL 3'
-if ! $macosx; then
-  alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+if type lsd > /dev/null; then
+  alias ls=lsd
+else
+  if ! $macosx; then
+    alias ls='ls --color=auto --human-readable --group-directories-first --classify'
+  fi
 fi
+alias l='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ls --tree'
 alias -s cxx=vim
 alias -s h=vim
 alias -s hxx=vim
@@ -307,15 +313,17 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/matt/bin/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/matt/bin/miniconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/matt/bin/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/matt/bin/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/matt/bin/miniconda/etc/profile.d/conda.sh" ]; then
+        . "/home/matt/bin/miniconda/etc/profile.d/conda.sh"
     else
-        export PATH="/home/matt/bin/miniconda3/bin:$PATH"
+        export PATH="/home/matt/bin/miniconda/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+source /home/matt/.config/broot/launcher/bash/br
