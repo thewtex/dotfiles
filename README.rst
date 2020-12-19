@@ -10,12 +10,12 @@ Basic setup
   cd ~/.config
   git clone git@github.com:thewtex/dotfiles.git
 
-gentoo setup
-------------
+Debian/Ubuntu setup
+-------------------
 
 ::
 
-  ./gentoo-packages
+  sudo ./debian-packages
 
 config setup
 -------------

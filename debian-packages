@@ -3,6 +3,7 @@
 apt-get install \
   atool \
   awesome \
+  build-essential \
   ccache \
   clang \
   cppcheck \
