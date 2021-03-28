@@ -8,7 +8,7 @@ Basic setup
 
   mkdir -p ~/.config
   cd ~/.config
-  git clone git@github.com:thewtex/dotfiles.git
+  git clone --recursive git@github.com:thewtex/dotfiles.git
 
 Debian/Ubuntu setup
 -------------------
