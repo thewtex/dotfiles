@@ -1,0 +1,13 @@
+#!/bin/sh
+
+brew install \
+  cmake \
+  keychain \
+  gh \
+  gpg2 \
+  libvips \
+  ninja \
+  nvim \
+  nvm \
+  tmux \
+  tmux-mem-cpu-load
