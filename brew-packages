@@ -6,8 +6,10 @@ brew install \
   gh \
   gpg2 \
   libvips \
+  pinentry-mac \
   ninja \
   nvim \
   nvm \
+  tig \
   tmux \
   tmux-mem-cpu-load
