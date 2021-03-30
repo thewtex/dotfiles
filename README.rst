@@ -47,7 +47,7 @@ config setup
   ./symlinks-config
 
   cd .vim/bundle/YouCompleteMe
-  ./install.py --ninja --ts-completer --clang-completer --rust-completer
+  ./install.py --ninja --ts-completer --clang-completer --rust-completer --system-libclang
   cd -
 
   cd /tmp/ && git clone --depth 1 https://github.com/ryanoasis/nerd-fonts && cd nerd-fonts && ./install.sh

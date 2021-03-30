@@ -4,14 +4,21 @@ macosx=false
 if $(which uname &> /dev/null); then
   if test $(uname) = "Darwin"; then
     macosx=true
+    if [ "$(arch)" = "arm64" ]; then
+        eval $(/opt/homebrew/bin/brew shellenv);
+        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+    else
+        eval $(/usr/local/bin/brew shellenv);
+        [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+    fi
   fi
 fi
 
 GPG_TTY=$(tty)
 export GPG_TTY
 # keychain
-if test -e /usr/bin/keychain; then
-  /usr/bin/keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 2E6EE54E654A512B
+if type keychain > /dev/null; then
+  keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 2E6EE54E654A512B
   [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
   [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
     . $HOME/.keychain/$HOSTNAME-sh
@@ -263,6 +270,9 @@ else
   if ! $macosx; then
     alias ls='ls --color=auto --human-readable --group-directories-first --classify'
   fi
+fi
+if type nvim > /dev/null; then
+  alias vim=nvim
 fi
 alias l='ls -l'
 alias la='ls -a'
