@@ -8,6 +8,7 @@ brew install \
   gh \
   gpg2 \
   libvips \
+  miniforge \
   pinentry-mac \
   ninja \
   nvim \
