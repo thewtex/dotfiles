@@ -1,6 +1,8 @@
 #!/bin/sh
 
 brew install \
+  atool \
+  clang-format@8 \
   cmake \
   keychain \
   gh \
@@ -10,6 +12,7 @@ brew install \
   ninja \
   nvim \
   nvm \
+  ranger \
   tig \
   tmux \
   tmux-mem-cpu-load
