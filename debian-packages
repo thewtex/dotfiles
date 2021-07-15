@@ -8,7 +8,7 @@ apt-get install \
   clang \
   cppcheck \
   cgdb \
-  ctags \
+  universal-ctags \
   curl \
   fd-find \
   fonts-firacode \
