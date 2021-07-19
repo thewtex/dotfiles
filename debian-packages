@@ -23,6 +23,7 @@ apt-get install \
   libjpeg-dev \
   libpng-dev \
   libtiff-dev \
+  libssl-dev \
   mosh \
   nvtop \
   ncurses-dev \
