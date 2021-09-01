@@ -48,3 +48,5 @@
 	gpgsign = false
 [sequence]
 	editor = interactive-rebase-tool
+[pull]
+	ff = only
