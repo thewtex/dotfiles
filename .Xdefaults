@@ -34,7 +34,8 @@ URxvt*reverseVideo: false
 URxvt*fading:	  20
 URxvt*scrollBar: false
 !URxvt*font:	  xft:Anonymous Pro:pixelsize=11:antialiasing=true
-URxvt*font:	  xft:Inconsolata:pixelsize=15:antialiasing=false
+!URxvt*font:	  xft:Inconsolata:pixelsize=15:antialiasing=false
+URxvt*font:	  xft:MesloLGS NF:pixelsize=16:antialiasing=true
 !URxvt*font:	  xft:InconsolataForPowerline NF:pixelsize=17:antialiasing=true
 !URxvt*font:	  xft:Inconsolata:pixelsize=17:antialiasing=false
 !URxvt*font:	  xft:Hack:size=14

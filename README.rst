@@ -24,6 +24,7 @@ config setup
 
   ./directory-layout
   ./symlinks-config
+  ./install-fonts
 
 Rust packages
 -------------------
@@ -47,7 +48,7 @@ Install nvm, node
   nvm use --lts
 
 
-YouComplete, Fonts, kitty
+YouComplete, kitty
 --------------------------
 
 ::
@@ -55,9 +56,6 @@ YouComplete, Fonts, kitty
   cd .vim/bundle/YouCompleteMe
   ./install.py --ninja --ts-completer --clang-completer --rust-completer --system-libclang
   cd -
-
-  cd /tmp/ && git clone --depth 1 https://github.com/ryanoasis/nerd-fonts && cd nerd-fonts && ./install.sh
-  cd /tmp/ && git clone --depth 1 https://github.com/powerline/fonts && cd fonts && ./install.sh
 
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
