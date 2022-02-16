@@ -6,9 +6,11 @@ Basic setup
 
 ::
 
+  sudo apt install git
   mkdir -p ~/.config
   cd ~/.config
   git clone --recursive git@github.com:thewtex/dotfiles.git
+  cd dotfiles
 
 Debian/Ubuntu setup
 -------------------
@@ -40,7 +42,7 @@ Install nvm, node
 
 ::
 
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   export NVM_DIR="$HOME/.config/nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -52,10 +54,6 @@ YouComplete, kitty
 --------------------------
 
 ::
-
-  cd .vim/bundle/YouCompleteMe
-  ./install.py --ninja --ts-completer --clang-completer --rust-completer --system-libclang
-  cd -
 
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
