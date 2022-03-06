@@ -50,12 +50,14 @@ Install nvm, node
   nvm use --lts
 
 
-YouComplete, kitty
+GitHub CLI, kitty
 --------------------------
 
 ::
 
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+  mkdir -p ~/.terminfo
+  rsync -a ~/.local/kitty.app/share/terminfo/x ~/.terminfo/
 
   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
