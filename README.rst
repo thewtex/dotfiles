@@ -25,7 +25,7 @@ config setup
 ::
 
   ./directory-layout
-  ./symlinks-config
+  ./symlinks-configs
   ./install-fonts
 
 Rust packages
