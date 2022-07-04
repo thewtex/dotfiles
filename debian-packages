@@ -35,7 +35,7 @@ apt-get install \
   pylint \
   pavucontrol \
   ranger \
-  rxvt-unicode-256color \
+  rxvt-unicode \
   tig \
   tmux \
   tree \
