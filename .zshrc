@@ -250,6 +250,7 @@ alias icmake='CC=ccache-clang CXX=ccache-clang++ cmake -G Ninja -DITK_USE_CCACHE
 alias grep='grep --color'
 alias gca='git commit -a'
 alias gsa='git status -sb'
+alias pn=pnpm
 if type nproc > /dev/null; then
   cores=$(nproc)
 elif test -d /sys/bus/cpu/devices; then

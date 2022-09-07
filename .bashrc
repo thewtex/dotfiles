@@ -65,6 +65,7 @@ alias ccmake='ccmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
 alias grep='grep --color'
 alias gca='git commit -a'
 alias gsa='git status -sb'
+alias pn=pnpm
 if type nproc > /dev/null; then
   cores=$(nproc)
 elif test -d /sys/bus/cpu/devices; then
