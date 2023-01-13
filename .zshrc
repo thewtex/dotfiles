@@ -341,4 +341,15 @@ else
     fi
 fi
 unset __conda_setup
+
+if [ -f "/home/matt/bin/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/home/matt/bin/mambaforge/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+
+export PATH="$WASMTIME_HOME/bin:$PATH"
+# Wasmer
+export WASMER_DIR="/home/matt/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
