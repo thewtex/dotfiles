@@ -56,7 +56,7 @@ nnoremap <leader>k :History/<CR>
 nnoremap <leader>r :Rg<CR>
 nnoremap <leader>be :Buffers<CR>
 
-if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode-256color" || &term =~ "builtin_gui" || $TERM == "dumb"
+if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == "screen-256color" || $TERM == "rxvt-unicode-256color" || &term =~ "builtin_gui" || $TERM == "dumb" || $TERM == "alacritty"
   "set t_Co=256
   "colorscheme molokayo
   "https://github.com/morhetz/gruvbox/issues/43
