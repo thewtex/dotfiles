@@ -2,7 +2,6 @@
 
 apt-get install \
   atool \
-  awesome \
   build-essential \
   ccache \
   clang \
@@ -13,6 +12,7 @@ apt-get install \
   fd-find \
   fonts-firacode \
   keychain \
+  gh \
   git \
   gnupg2 \
   fonts-inconsolata \
@@ -24,10 +24,8 @@ apt-get install \
   libpng-dev \
   libtiff-dev \
   libssl-dev \
-  mosh \
   nvtop \
   ncurses-dev \
-  nemiver \
   ninja-build \
   pdfgrep \
   pinentry-curses \
@@ -35,14 +33,14 @@ apt-get install \
   pylint \
   pavucontrol \
   ranger \
-  rxvt-unicode \
   tig \
   tmux \
   tree \
   valgrind \
   neovim \
-  xclip \
-  zsh
+  zsh \
+  zsh-autosuggestions \
+  zsh-syntax-highlighting
 
 update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
 update-alternatives --config vi

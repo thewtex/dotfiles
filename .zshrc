@@ -353,3 +353,4 @@ export PATH="$WASMTIME_HOME/bin:$PATH"
 # Wasmer
 export WASMER_DIR="/home/matt/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

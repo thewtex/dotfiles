@@ -50,8 +50,8 @@ Install nvm, node
   nvm use --lts
 
 
-GitHub CLI, kitty
---------------------------
+kitty, starship, wezterm, wasmtime, micromamba
+-----------------------------------------------
 
 ::
 
@@ -59,7 +59,13 @@ GitHub CLI, kitty
   mkdir -p ~/.terminfo
   rsync -a ~/.local/kitty.app/share/terminfo/x ~/.terminfo/
 
-  curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg
-  echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
-  sudo apt update
-  sudo apt install gh
+  curl https://wasmtime.dev/install.sh -sSf | bash
+
+  curl -sS https://starship.rs/install.sh | sh
+
+  wget https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-Ubuntu20.04.AppImage
+  chmod +x WezTerm-nightly-Ubuntu20.04.AppImage
+  mv WezTerm-nightly-Ubuntu20.04.AppImage wezterm
+  sudo mv wezterm /usr/local/bin/
+
+  "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
