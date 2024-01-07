@@ -328,24 +328,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/matt/bin/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE='/home/matt/bin/micromamba/micromamba';
+export MAMBA_ROOT_PREFIX='/home/matt/bin/micromamba';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
+    eval "$__mamba_setup"
 else
-    if [ -f "/home/matt/bin/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/home/matt/bin/mambaforge/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/matt/bin/mambaforge/bin:$PATH"
-    fi
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
 fi
-unset __conda_setup
-
-if [ -f "/home/matt/bin/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/home/matt/bin/mambaforge/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
+unset __mamba_setup
+# <<< mamba initialize <<<
 
 export WASMTIME_HOME="$HOME/.wasmtime"
 

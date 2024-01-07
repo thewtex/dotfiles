@@ -3,6 +3,7 @@
 apt-get install \
   atool \
   build-essential \
+  btop \
   ccache \
   clang \
   cppcheck \
