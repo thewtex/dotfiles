@@ -15,6 +15,7 @@ apt-get install \
   keychain \
   gh \
   git \
+  git-delta \
   gnupg2 \
   fonts-inconsolata \
   libeigen3-dev \
