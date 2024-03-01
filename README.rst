@@ -27,6 +27,7 @@ config setup
   ./directory-layout
   ./symlinks-configs
   ./install-fonts
+  chsh -s /bin/zsh matt
 
 Rust packages
 -------------------
@@ -37,23 +38,14 @@ Rust packages
   source $HOME/.cargo/env
   ./rust-clis.sh
 
-Install nvm, node
-------------------
-
-::
-
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-  export NVM_DIR="$HOME/.config/nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-  nvm install --lts
-  nvm use --lts
-
-
-kitty, starship, wezterm, wasmtime, micromamba
+pnpm, node, kitty, starship, wezterm, wasmtime, micromamba
 -----------------------------------------------
 
 ::
+
+  curl -fsSL https://get.pnpm.io/install.sh | sh -
+
+  pnpm env use --global lts
 
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
   mkdir -p ~/.terminfo
