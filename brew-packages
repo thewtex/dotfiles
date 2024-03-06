@@ -2,18 +2,27 @@
 
 brew install \
   atool \
+  btop \
   clang-format@8 \
   cmake \
   keychain \
   gh \
+  git-delta \
   gpg2 \
+  htop \
+  kitty \
   libvips \
-  miniforge \
+  micromamba \
+  pnpm \
   pinentry-mac \
   ninja \
   nvim \
   nvm \
   ranger \
   tig \
+  starship \
   tmux \
-  tmux-mem-cpu-load
+  tmux-mem-cpu-load \
+  wasmtime \
+  zsh-autosuggestions \
+  zsh-syntax-highlighting
