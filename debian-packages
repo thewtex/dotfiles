@@ -26,6 +26,7 @@ apt-get install \
   libpng-dev \
   libtiff-dev \
   libssl-dev \
+  meld \
   nvtop \
   ncurses-dev \
   ninja-build \
