@@ -16,6 +16,7 @@ apt-get install \
   fonts-firacode \
   keychain \
   gh \
+  gparted \
   git \
   git-delta \
   gnupg2 \
