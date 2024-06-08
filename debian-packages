@@ -1,6 +1,7 @@
 #!/bin/sh
 
 apt-get install \
+  awesome \
   atool \
   build-essential \
   buildah \
