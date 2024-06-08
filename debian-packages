@@ -3,6 +3,7 @@
 apt-get install \
   atool \
   build-essential \
+  buildah \
   btop \
   ccache \
   clang \
@@ -32,6 +33,7 @@ apt-get install \
   ninja-build \
   pdfgrep \
   pinentry-curses \
+  podman \
   python3-dev \
   pylint \
   pavucontrol \
