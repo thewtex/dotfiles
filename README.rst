@@ -53,8 +53,8 @@ Rust packages
   source $HOME/.cargo/env
   ./rust-clis.sh
 
-pnpm, node, kitty, starship, wezterm, wasmtime, micromamba
------------------------------------------------
+pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave
+--------------------------------------------------------------------------
 
 ::
 
@@ -74,5 +74,11 @@ pnpm, node, kitty, starship, wezterm, wasmtime, micromamba
   echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
   sudo apt-get update -y
   sudo apt install wezterm
+
+  sudo apt install curl
+  sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+  echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+  sudo apt update
+  sudo apt install brave-browser
 
   "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
