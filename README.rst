@@ -70,9 +70,9 @@ pnpm, node, kitty, starship, wezterm, wasmtime, micromamba
 
   curl -sS https://starship.rs/install.sh | sh
 
-  wget https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-Ubuntu20.04.AppImage
-  chmod +x WezTerm-nightly-Ubuntu20.04.AppImage
-  mv WezTerm-nightly-Ubuntu20.04.AppImage wezterm
-  sudo mv wezterm /usr/local/bin/
+  curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+  echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+  sudo apt-get update -y
+  sudo apt install wezterm
 
   "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
