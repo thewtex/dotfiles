@@ -13,6 +13,7 @@ apt-get install \
   universal-ctags \
   curl \
   fd-find \
+  flameshot \
   fonts-firacode \
   keychain \
   gh \
