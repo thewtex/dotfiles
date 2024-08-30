@@ -10,7 +10,7 @@
 	editor = vim
 [user]
 	name = Matt McCormick
-	email = matt.mccormick@kitware.com
+	email = matt@mmmccormick.com
 [merge]
 	tool = meld
 [clean]
