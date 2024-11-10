@@ -227,7 +227,7 @@ setopt nohashdirs
 export CCACHE_COMPRESS=1
 export EDITOR=/usr/bin/vim
 export ExternalData_OBJECT_STORES=${HOME}/data
-export GREP_COLOR="01;32"  # color grep matches green
+export GREP_COLORS='ms=01;33:mc=01;31:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export LESS="$LESS -iJr"
 export GEM_HOME="${HOME}/bin/gems"
