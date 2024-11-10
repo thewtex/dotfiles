@@ -2,9 +2,11 @@
 
 brew install \
   atool \
+  brave-browser \
   btop \
   cmake \
   keychain \
+  firefox \
   gh \
   git-delta \
   gpg2 \
@@ -19,6 +21,8 @@ brew install \
   nvm \
   ranger \
   tig \
+  rust \
+  rustup \
   starship \
   tmux \
   tmux-mem-cpu-load \
