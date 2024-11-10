@@ -18,12 +18,13 @@ GPG_TTY=$(tty)
 export GPG_TTY
 # keychain
 if type keychain > /dev/null; then
-  keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 2E6EE54E654A512B
+  #keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 2E6EE54E654A512B
+  keychain --agents "ssh" --timeout 1440 ~/.ssh/id_rsa
   [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
   [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
     . $HOME/.keychain/$HOSTNAME-sh
-  [ -f $HOME/.keychain/$HOSTNAME-sh-gpg ] && \
-    . $HOME/.keychain/$HOSTNAME-sh-gpg
+  #[ -f $HOME/.keychain/$HOSTNAME-sh-gpg ] && \
+    #. $HOME/.keychain/$HOSTNAME-sh-gpg
 fi
 
 export NVM_LAZY_LOAD=true
