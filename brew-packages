@@ -5,6 +5,7 @@ brew install \
   brave-browser \
   btop \
   cmake \
+  dua-cli \
   keychain \
   firefox \
   gh \
