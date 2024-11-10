@@ -3,7 +3,6 @@
 brew install \
   atool \
   btop \
-  clang-format@8 \
   cmake \
   keychain \
   gh \
@@ -23,6 +22,8 @@ brew install \
   starship \
   tmux \
   tmux-mem-cpu-load \
+  visual-studio-code \
   wasmtime \
+  wezterm \
   zsh-autosuggestions \
   zsh-syntax-highlighting
