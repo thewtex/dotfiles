@@ -242,6 +242,7 @@ fi
 [[ -e /usr/bin/virtualenvwrapper_lazy.sh ]] && source /usr/bin/virtualenvwrapper_lazy.sh
 export WORKON_HOME=${HOME}/bin/venvs/
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--system-site-packages'
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # misc aliases
 alias cmake='cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON '
