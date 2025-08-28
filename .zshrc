@@ -65,6 +65,7 @@ promptinit
 prompt adam2
 export LP_RUNTIME_THRESHOLD=3
 #[[ $- = *i* ]] && [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(battery dir dir_writable vcs virtualenv vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator history time)
 POWERLEVEL9K_MODE='nerdfont-complete'
