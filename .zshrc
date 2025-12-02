@@ -19,7 +19,7 @@ export GPG_TTY
 # keychain
 if type keychain > /dev/null; then
   #keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 2E6EE54E654A512B
-  keychain --agents "ssh" --timeout 1440 ~/.ssh/id_rsa
+  keychain --agents "ssh" --timeout 1440 ~/.ssh/id_ed25519
   [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
   [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
     . $HOME/.keychain/$HOSTNAME-sh
@@ -358,5 +358,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-export PATH="/Users/matt/.pixi/bin:$PATH"
+export PATH="/home/matt/.pixi/bin:$PATH"
 alias p=pixi
