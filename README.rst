@@ -53,8 +53,8 @@ Rust packages
   source $HOME/.cargo/env
   ./rust-clis.sh
 
-pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi
---------------------------------------------------------------------------
+pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv
+---------------------------------------------------------------------------
 
 ::
 
@@ -84,3 +84,5 @@ pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi
   curl -fsSL https://pixi.sh/install.sh | sh
 
   "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+
+  curl -LsSf https://astral.sh/uv/install.sh | sh
