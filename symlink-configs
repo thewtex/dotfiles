@@ -32,6 +32,7 @@ cd ~/.config
 for config in awesome \
   qtile \
   nvim \
+  opencode \
   kitty
   do
   if test ! -d $config; then

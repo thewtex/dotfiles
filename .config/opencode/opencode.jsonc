@@ -1,0 +1,74 @@
+{
+  "mcp": {
+    "perplexity": {
+      "type": "local",
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "PERPLEXITY_API_KEY",
+        "mcp/perplexity-ask"
+      ],
+      "environment": {
+        "PERPLEXITY_API_KEY": "{env:PERPLEXITY_API_KEY}"
+      }
+    },
+    "context7": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    },
+    "exa": {
+      "type": "local",
+      "command": ["npx", "-y", "exa-mcp-server", "tools=web_search_exa,web_search_advanced_exa,crawling_exa,get_code_context_exa"],
+      "environment": {
+        "EXA_API_KEY": "{env:EXA_API_KEY}"
+      },
+      "enabled": true
+    },
+    "chrome_devtools": {
+      "type": "local",
+      "command": ["npx", "chrome-devtools-mcp@latest"],
+      "enabled": true
+    },
+    "vibe_kanban": {
+      "type": "local",
+      "command": ["npx", "-y", "vibe-kanban@latest", "--mcp"],
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "@playwright/mcp@latest"],
+      "enabled": true
+    },
+    "dev_manager": {
+      "type": "local",
+      "command": ["npx", "dev-manager-mcp", "stdio"],
+      "enabled": true
+    }
+  },
+  "provider": {
+    "llama.cpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "llama-server (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:9898/v1"
+      },
+      "models": {
+        "qwen3-coder-next": {
+          "name": "Qwen3-Coder-Next: (local)",
+          "limit": {
+            "context": 65536,
+            "output": 32768
+          }
+        }
+      }
+    },
+  },
+  "$schema": "https://opencode.ai/config.json"
+}
