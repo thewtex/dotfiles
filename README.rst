@@ -53,10 +53,16 @@ Rust packages
   source $HOME/.cargo/env
   ./rust-clis.sh
 
-pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv
----------------------------------------------------------------------------
+pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv, claude, television, bun
+-----------------------------------------------------------------------------------------------------
 
 ::
+  curl -fsSL https://bun.com/install | bash
+
+  curl -fsSL https://alexpasmantier.github.io/television/install.sh | bash
+
+  cp claude.json.template ~/.claude.json
+  curl -fsSL https://claude.ai/install.sh | bash
 
   curl -fsSL https://get.pnpm.io/install.sh | sh -
 
