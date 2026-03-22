@@ -94,16 +94,7 @@ pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv, cla
   cp claude.json.template ~/.claude.json
   curl -fsSL https://claude.ai/install.sh | bash
   claude auth login
-
-  npx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser
-  npx skills add https://github.com/coreyhaines31/marketingskills --skill copywriting
-  npx skills add https://github.com/vercel-labs/skills --skill find-skills
-  npx skills add https://github.com/anthropics/skills --skill frontend-design
-  npx skills add https://github.com/anthropics/skills --skill mcp-builder
-  npx skills add https://github.com/anthropics/skills --skill pdf
-  npx skills add https://github.com/pbakaus/impeccable --skill polish
-  npx skills add https://github.com/currents-dev/playwright-best-practices-skill --skill playwright-best-practices
-  npx skills add https://github.com/coderabbitai/skills --skill code-review
+  ./install-skills
 
   curl -fsSL https://alexpasmantier.github.io/television/install.sh | bash
   tv update-channels

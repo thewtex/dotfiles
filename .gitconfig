@@ -73,3 +73,5 @@
     hunk-header-style = file line-number syntax
 [init]
 	defaultBranch = main
+[coderabbit]
+	machineId = cli/faab4cf26d564ece8e32bade7f408cd0
