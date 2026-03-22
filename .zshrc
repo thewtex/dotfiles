@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/matt/.zsh/completions:"* ]]; then export FPATH="/home/matt/.zsh/completions:$FPATH"; fi
 #!/bin/zsh
 
 macosx=false
@@ -19,7 +21,8 @@ export GPG_TTY
 # keychain
 if type keychain > /dev/null; then
   #keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 2E6EE54E654A512B
-  keychain --agents "ssh" --timeout 1440 ~/.ssh/id_ed25519
+  #keychain --agents "ssh" --timeout 1440 ~/.ssh/id_ed25519
+  keychain --agents "ssh" ~/.ssh/id_ed25519
   [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
   [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
     . $HOME/.keychain/$HOSTNAME-sh
@@ -73,6 +76,7 @@ POWERLEVEL9K_SHOW_CHANGESET=true
 POWERLEVEL9K_CHANGESET_HASH_LENGTH=8
 #POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes) # git-untracked git-aheadbehind git-stash git-remotebranch git-tagname)
 POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind git-remotebranch) # git-tagname)
+POWERLEVEL9K_INSTANT_PROMPT=off
 [[ $- = *i* ]] && [[ -e ~/.config/dotfiles/powerlevel10k/powerlevel10k.zsh-theme ]] && source ~/.config/dotfiles/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -328,7 +332,7 @@ function ris2bib() {
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
@@ -360,3 +364,25 @@ esac
 # pnpm end
 export PATH="/home/matt/.pixi/bin:$PATH"
 alias p=pixi
+alias pr="pixi run --as-is"
+#export OPTIX_ROOT_DIR=/home/matt/bin/NVIDIA-OptiX-SDK-7.7.0-linux64-x86_64
+. "/home/matt/.deno/env"
+alias itksnap=/home/matt/bin/itksnap-4.4.0-alpha3-20250612-Linux-x86_64/bin/itksnap
+export OCI_EXE=docker
+alias gemini="npx https://github.com/google-gemini/gemini-cli"
+export SEARXNG_URL="https://search.fideus.app"
+
+. "$HOME/.local/bin/env"
+(( ! ${+functions[p10k]} )) || p10k finalize
+
+# bun completions
+[ -s "/home/matt/.bun/_bun" ] && source "/home/matt/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# opencode
+export PATH=/home/matt/.opencode/bin:$PATH
+
+eval "$(tv init zsh)"
