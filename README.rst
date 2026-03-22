@@ -59,11 +59,6 @@ pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv, cla
 ::
   curl -fsSL https://bun.com/install | bash
 
-  curl -fsSL https://alexpasmantier.github.io/television/install.sh | bash
-
-  cp claude.json.template ~/.claude.json
-  curl -fsSL https://claude.ai/install.sh | bash
-
   curl -fsSL https://get.pnpm.io/install.sh | sh -
 
   pnpm env use --global lts
@@ -92,3 +87,18 @@ pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv, cla
   "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 
   curl -LsSf https://astral.sh/uv/install.sh | sh
+
+  cp claude.json.template ~/.claude.json
+  curl -fsSL https://claude.ai/install.sh | bash
+  npx skills add https://github.com/vercel-labs/agent-browser --skill agent-browser
+  npx skills add https://github.com/coreyhaines31/marketingskills --skill copywriting
+  npx skills add https://github.com/vercel-labs/skills --skill find-skills
+  npx skills add https://github.com/anthropics/skills --skill frontend-design
+  npx skills add https://github.com/anthropics/skills --skill mcp-builder
+  npx skills add https://github.com/anthropics/skills --skill pdf
+  npx skills add https://github.com/pbakaus/impeccable --skill polish
+  npx skills add https://github.com/currents-dev/playwright-best-practices-skill --skill playwright-best-practices
+
+  curl -fsSL https://alexpasmantier.github.io/television/install.sh | bash
+  tv update-channels
+
