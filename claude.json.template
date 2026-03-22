@@ -1,0 +1,62 @@
+{
+  "installMethod": "native",
+  "autoUpdates": false,
+  "editorMode": "vim",
+  "mcpServers": {
+    "chrome_devtools": {
+      "command": "npx",
+      "args": [
+        "chrome-devtools-mcp@latest"
+      ]
+    },
+    "perplexity": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@perplexity-ai/mcp-server"
+      ],
+      "env": {
+        "PERPLEXITY_API_KEY": "${PERPLEXITY_API_KEY}"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    },
+    "dev_manager": {
+      "command": "npx",
+      "args": [
+        "dev-manager-mcp",
+        "stdio"
+      ]
+    },
+    "exa": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "exa-mcp-server",
+        "tools=web_search_exa,get_code_context_exa"
+      ],
+      "env": {
+        "EXA_API_KEY": "${EXA_API_KEY}"
+      }
+    },
+    "vibe_kanban": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "vibe-kanban@latest",
+        "--mcp"
+      ]
+    }
+  }
+}

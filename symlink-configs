@@ -33,6 +33,7 @@ for config in awesome \
   qtile \
   nvim \
   opencode \
+  television \
   kitty
   do
   if test ! -d $config; then
