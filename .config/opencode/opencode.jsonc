@@ -3,13 +3,9 @@
     "perplexity": {
       "type": "local",
       "command": [
-        "docker",
-        "run",
-        "-i",
-        "--rm",
-        "-e",
-        "PERPLEXITY_API_KEY",
-        "mcp/perplexity-ask"
+        "npx",
+        "-y",
+        "@perplexity-ai/mcp-server",
       ],
       "environment": {
         "PERPLEXITY_API_KEY": "{env:PERPLEXITY_API_KEY}"
