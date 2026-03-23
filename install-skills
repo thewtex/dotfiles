@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+skills=(
+  "https://github.com/vercel-labs/agent-browser agent-browser"
+  "https://github.com/coreyhaines31/marketingskills copywriting"
+  "https://github.com/vercel-labs/skills find-skills"
+  "https://github.com/anthropics/skills frontend-design"
+  "https://github.com/anthropics/skills mcp-builder"
+  "https://github.com/anthropics/skills pdf"
+  "https://github.com/pbakaus/impeccable polish"
+  "https://github.com/currents-dev/playwright-best-practices-skill playwright-best-practices"
+  "https://github.com/coderabbitai/skills code-review"
+  "https://github.com/jeffallan/claude-skills rust-engineer"
+  "https://github.com/gfx-rs/wgpu webgpu-specs"
+  "https://github.com/cazala/webgpu-skill webgpu"
+  "https://github.com/apollographql/skills rust-best-practices"
+)
+
+for entry in "${skills[@]}"; do
+  read -r repo skill <<< "$entry"
+  npx skills add "$repo" --skill "$skill" --agent universal --agent claude-code --global --yes
+done
