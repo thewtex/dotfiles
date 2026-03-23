@@ -6,6 +6,4 @@ fi
 source ~/.bashrc
 
 . "$HOME/.cargo/env"
-. "$HOME/.deno/env"
-source /home/matt/.local/share/bash-completion/completions/deno.bash
 . "$HOME/.local/bin/env"

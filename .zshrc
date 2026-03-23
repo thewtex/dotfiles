@@ -25,7 +25,7 @@ if type keychain > /dev/null; then
   #keychain --agents "ssh" ~/.ssh/id_ed25519
   #keychain --agents "ssh" --timeout 1440 ~/.ssh/id_rsa
   #keychain --agents "ssh" --timeout 1440 ~/.ssh/id_ed25519
-  keychain --agents "ssh" ~/.ssh/id_rsa
+  keychain --agents "ssh" ~/.ssh/id_ed25519
   [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
   [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
     . $HOME/.keychain/$HOSTNAME-sh
@@ -339,14 +339,14 @@ export NVM_DIR="$HOME/.nvm"
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # >>> mamba initialize >>>
-# !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/home/matt/bin/exe/micromamba';
-export MAMBA_ROOT_PREFIX='/home/matt/bin/micromamba';
+# !! Contents within this block are managed by 'micromamba shell init' !!
+export MAMBA_EXE='/home/matt/.local/bin/micromamba';
+export MAMBA_ROOT_PREFIX='/home/matt/.local/bin/micromamba';
 __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__mamba_setup"
 else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+    alias micromamba="$MAMBA_EXE"  # Fallback on help from micromamba activate
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
@@ -383,7 +383,8 @@ alias termvisage="micromamba run -n termvisage termvisage"
 
 # opencode
 export PATH=$HOME/.opencode/bin:$PATH
-alias itksnap=$HOME/bin/itksnap-4.2.2-20241202-Linux-x86_64/bin/itksnap
+alias itksnap=$HOME/bin/itksnap-4.4.0-20250909-Linux-x86_64/bin/itksnap
+alias Slicer=/home/matt/bin/Slicer-5.10.0-linux-amd64/Slicer
 (( ! ${+functions[p10k]} )) || p10k finalize
 
 . "$HOME/.local/bin/env"
@@ -391,6 +392,11 @@ export PATH=/snap/bin:$PATH
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+if [ -s "/usr/local/cuda/bin/nvcc" ]; then
+  export CUDACXX=/usr/local/cuda/bin/nvcc
+fi
+
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

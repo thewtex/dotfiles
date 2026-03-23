@@ -19,6 +19,10 @@ require("debian.menu")
 --local debian = require("debian.menu")
 local has_fdo, freedesktop = pcall(require, "freedesktop")
 
+local lain = require("lain")
+lain.layout.termfair.nmaster = 3
+lain.layout.termfair.ncol    = 1
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -49,7 +53,7 @@ end
 beautiful.init(awful.util.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
+terminal = "wezterm"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -267,6 +271,20 @@ globalkeys = awful.util.table.join(
             awful.client.focus.byidx( 1)
         end,
         {description = "focus next by index", group = "client"}
+    ),
+    awful.key({ modkey, "Shift"   }, "t",
+        function ()
+            local selected = awful.screen.focused().selected_tag
+            awful.layout.set(lain.layout.termfair.center, selected)
+        end,
+        {description = "set layout to termfair", group = "client"}
+    ),
+    awful.key({ modkey, "Control"   }, "t",
+        function ()
+            local selected = awful.screen.focused().selected_tag
+            awful.layout.set(lain.layout.centerwork, selected)
+        end,
+        {description = "set layout to termfair", group = "client"}
     ),
     awful.key({ modkey,           }, "k",
         function ()
@@ -603,3 +621,12 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- Disable screen saver
+--awful.util.spawn("xset s off")
+-- Disable DPMS (Energy Star) features
+--awful.util.spawn("xset -dpms")
+-- Do not blank the screen
+--awful.util.spawn("xset s noblank")
+--awful.util.spawn("xrandr -s 7680x2160")
+
