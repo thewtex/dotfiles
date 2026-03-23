@@ -172,6 +172,6 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
-. "/home/matt/.deno/env"
-source /home/matt/.local/share/bash-completion/completions/deno.bash
+eval "$(pixi completion --shell bash)"
+alias p=pixi
 . "$HOME/.local/bin/env"

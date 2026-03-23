@@ -22,7 +22,10 @@ export GPG_TTY
 if type keychain > /dev/null; then
   #keychain --agents "gpg,ssh" --timeout 1440 ~/.ssh/id_rsa 2E6EE54E654A512B
   #keychain --agents "ssh" --timeout 1440 ~/.ssh/id_ed25519
-  keychain --agents "ssh" ~/.ssh/id_ed25519
+  #keychain --agents "ssh" ~/.ssh/id_ed25519
+  #keychain --agents "ssh" --timeout 1440 ~/.ssh/id_rsa
+  #keychain --agents "ssh" --timeout 1440 ~/.ssh/id_ed25519
+  keychain --agents "ssh" ~/.ssh/id_rsa
   [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
   [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
     . $HOME/.keychain/$HOSTNAME-sh
@@ -68,6 +71,7 @@ promptinit
 prompt adam2
 export LP_RUNTIME_THRESHOLD=3
 #[[ $- = *i* ]] && [[ -e ~/.config/dotfiles/liquidprompt/liquidprompt ]] && source ~/.config/dotfiles/liquidprompt/liquidprompt
+unset prompt_cr
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(battery dir dir_writable vcs virtualenv vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator history time)
@@ -336,9 +340,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/home/matt/bin/micromamba/micromamba';
+export MAMBA_EXE='/home/matt/bin/exe/micromamba';
 export MAMBA_ROOT_PREFIX='/home/matt/bin/micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell bash --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__mamba_setup"
 else
@@ -363,26 +367,33 @@ case ":$PATH:" in
 esac
 # pnpm end
 export PATH="/home/matt/.pixi/bin:$PATH"
+eval "$(pixi completion --shell zsh)"
 alias p=pixi
 alias pr="pixi run --as-is"
 #export OPTIX_ROOT_DIR=/home/matt/bin/NVIDIA-OptiX-SDK-7.7.0-linux64-x86_64
-. "/home/matt/.deno/env"
-alias itksnap=/home/matt/bin/itksnap-4.4.0-alpha3-20250612-Linux-x86_64/bin/itksnap
+. "$HOME/.deno/env"
 export OCI_EXE=docker
-alias gemini="npx https://github.com/google-gemini/gemini-cli"
 export SEARXNG_URL="https://search.fideus.app"
 
 . "$HOME/.local/bin/env"
 (( ! ${+functions[p10k]} )) || p10k finalize
 
+export OPTIX_ROOT_DIR=$HOME/bin/NVIDIA-OptiX-SDK-7.7.0-linux64-x86_64
+alias termvisage="micromamba run -n termvisage termvisage"
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH
+alias itksnap=$HOME/bin/itksnap-4.2.2-20241202-Linux-x86_64/bin/itksnap
+(( ! ${+functions[p10k]} )) || p10k finalize
+
+. "$HOME/.local/bin/env"
+export PATH=/snap/bin:$PATH
+
 # bun completions
-[ -s "/home/matt/.bun/_bun" ] && source "/home/matt/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# opencode
-export PATH=/home/matt/.opencode/bin:$PATH
 
 eval "$(tv init zsh)"

@@ -46,6 +46,11 @@
       "type": "local",
       "command": ["npx", "dev-manager-mcp", "stdio"],
       "enabled": true
+    },
+    "astro_docs": {
+      "type": "remote",
+      "url": "https://mcp.docs.astro.build/mcp",
+      "enabled": true
     }
   },
   "provider": {

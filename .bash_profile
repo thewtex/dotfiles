@@ -5,9 +5,7 @@ fi
 
 source ~/.bashrc
 
-
-export PATH="$HOME/.poetry/bin:$PATH"
 . "$HOME/.cargo/env"
-. "/home/matt/.deno/env"
+. "$HOME/.deno/env"
 source /home/matt/.local/share/bash-completion/completions/deno.bash
 . "$HOME/.local/bin/env"
