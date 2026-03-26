@@ -8,10 +8,8 @@ if $(which uname &> /dev/null); then
     macosx=true
     if [ "$(arch)" = "arm64" ]; then
         eval $(/opt/homebrew/bin/brew shellenv);
-        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
     else
         eval $(/usr/local/bin/brew shellenv);
-        [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
     fi
   fi
 fi
@@ -31,11 +29,6 @@ if type keychain > /dev/null; then
     . $HOME/.keychain/$HOSTNAME-sh
   #[ -f $HOME/.keychain/$HOSTNAME-sh-gpg ] && \
     #. $HOME/.keychain/$HOSTNAME-sh-gpg
-fi
-
-export NVM_LAZY_LOAD=true
-if test -e ~/.zsh-nvm/zsh-nvm.plugin.zsh; then
-  source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 fi
 
 # tab completion
@@ -334,8 +327,6 @@ function ris2bib() {
   ris2xml $1 | xml2bib -b > $(basename $1 .ris).bib
 }
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # >>> mamba initialize >>>
@@ -357,7 +348,6 @@ export PATH="$WASMTIME_HOME/bin:$PATH"
 # Wasmer
 export WASMER_DIR="/home/matt/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # pnpm
 export PNPM_HOME="/home/matt/.local/share/pnpm"
@@ -403,3 +393,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 eval "$(tv init zsh)"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"

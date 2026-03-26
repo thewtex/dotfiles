@@ -20,7 +20,6 @@ brew install \
   pinentry-mac \
   ninja \
   nvim \
-  nvm \
   ranger \
   tig \
   rust \

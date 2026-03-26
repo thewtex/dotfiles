@@ -53,15 +53,16 @@ Rust packages
   source $HOME/.cargo/env
   ./rust-clis.sh
 
-pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv, claude, television, bun
------------------------------------------------------------------------------------------------------
+pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv, claude, television, bun vp
+--------------------------------------------------------------------------------------------------------
 
 ::
   curl -fsSL https://bun.com/install | bash
 
   curl -fsSL https://get.pnpm.io/install.sh | sh -
 
-  pnpm env use --global lts
+  curl -fsSL https://vite.plus | bash
+  vp env setup
 
   curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
   mkdir -p ~/.terminfo
