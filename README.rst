@@ -57,6 +57,7 @@ pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv, cla
 --------------------------------------------------------------------------------------------------------
 
 ::
+
   curl -fsSL https://bun.com/install | bash
 
   curl -fsSL https://get.pnpm.io/install.sh | sh -
