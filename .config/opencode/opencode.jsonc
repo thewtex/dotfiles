@@ -32,11 +32,6 @@
       "command": ["npx", "chrome-devtools-mcp@latest"],
       "enabled": true
     },
-    "vibe_kanban": {
-      "type": "local",
-      "command": ["npx", "-y", "vibe-kanban@latest", "--mcp"],
-      "enabled": true
-    },
     "playwright": {
       "type": "local",
       "command": ["npx", "@playwright/mcp@latest"],
@@ -51,7 +46,17 @@
       "type": "remote",
       "url": "https://mcp.docs.astro.build/mcp",
       "enabled": true
-    }
+    },
+    "serena": {
+      "type": "local",
+      "command": [
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "codex"
+      ],
+      "enabled": true
+    },
   },
   "provider": {
     "llama.cpp": {
