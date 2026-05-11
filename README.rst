@@ -98,6 +98,11 @@ pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv, cla
   claude auth login
   ./install-skills
 
+  uv tool install -p 3.13 serena-agent@latest --prerelease=allow
+  serena init
+  serena setup claude-code
+  # See also: https://oraios.github.io/serena/02-usage/030_clients.html#claude-code
+
   curl -fsSL https://alexpasmantier.github.io/television/install.sh | bash
   tv update-channels
 

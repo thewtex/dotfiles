@@ -50,13 +50,15 @@
         "EXA_API_KEY": "${EXA_API_KEY}"
       }
     },
-    "vibe_kanban": {
-      "command": "npx",
+    "serena": {
+      "type": "stdio",
+      "command": "serena",
       "args": [
-        "-y",
-        "vibe-kanban@latest",
-        "--mcp"
-      ]
+        "start-mcp-server",
+        "--context=claude-code",
+        "--project-from-cwd"
+      ],
+      "env": {}
     }
   }
 }
