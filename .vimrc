@@ -9,7 +9,7 @@ set laststatus=2
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
 set number
 set cursorline
-set pastetoggle=<F12>
+"set pastetoggle=<F12>
 set softtabstop=2
 set shiftwidth=2
 set expandtab
@@ -23,7 +23,7 @@ set incsearch
 set ignorecase smartcase " when searching, search pattern with an uppercase letter will only be case-sensitive
 set encoding=utf8
 set guifont=Inconsolata\ for\ Powerline\ Plus\ Nerd\ File\ Types:h10
-set guioptions+=a
+"set guioptions+=a
 " wrapping textwidth
 set history=500				" keep 50 lines of command history
 set textwidth=78
