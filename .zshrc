@@ -365,8 +365,8 @@ alias pr="pixi run --as-is"
 export OCI_EXE=docker
 export SEARXNG_URL="https://search.fideus.app"
 
-RUSTC_WRAPPER=sccache
-SCCACHE_CACHE_SIZE=30G
+export RUSTC_WRAPPER=sccache
+export SCCACHE_CACHE_SIZE=30G
 
 . "$HOME/.local/bin/env"
 (( ! ${+functions[p10k]} )) || p10k finalize
