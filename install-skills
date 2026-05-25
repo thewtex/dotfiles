@@ -15,6 +15,7 @@ skills=(
   "https://github.com/cazala/webgpu-skill webgpu"
   "https://github.com/apollographql/skills rust-best-practices"
   "https://github.com/OthmanAdi/planning-with-files planning-with-files"
+  "https://github.com/GoogleChrome/modern-web-guidance modern-web-guidance"
 )
 
 for entry in "${skills[@]}"; do
