@@ -16,6 +16,7 @@ skills=(
   "https://github.com/apollographql/skills rust-best-practices"
   "https://github.com/OthmanAdi/planning-with-files planning-with-files"
   "https://github.com/GoogleChrome/modern-web-guidance modern-web-guidance"
+  "https://github.com/cocoindex-io/cocoindex-code cocoindex-code"
 )
 
 for entry in "${skills[@]}"; do

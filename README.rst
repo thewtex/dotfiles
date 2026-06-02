@@ -103,6 +103,8 @@ pnpm, node, kitty, starship, wezterm, wasmtime, micromamba, brave, pixi, uv, cla
   serena setup claude-code
   # See also: https://oraios.github.io/serena/02-usage/030_clients.html#claude-code
 
+  uv tool install --upgrade 'cocoindex-code[full]'
+
   curl -fsSL https://alexpasmantier.github.io/television/install.sh | bash
   tv update-channels
 
