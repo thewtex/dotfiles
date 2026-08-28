@@ -7,8 +7,6 @@ skills=(
   "https://github.com/anthropics/skills frontend-design"
   "https://github.com/anthropics/skills mcp-builder"
   "https://github.com/anthropics/skills pdf"
-  "https://github.com/pbakaus/impeccable impeccable"
-  "https://github.com/currents-dev/playwright-best-practices-skill playwright-best-practices"
   "https://github.com/coderabbitai/skills code-review"
   "https://github.com/jeffallan/claude-skills rust-engineer"
   "https://github.com/gfx-rs/wgpu webgpu-specs"
