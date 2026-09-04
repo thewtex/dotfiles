@@ -1,0 +1,18 @@
+onboarding = false
+
+[keys]
+prefix = "backtick"
+
+[experimental]
+kitty_graphics = true
+pane_history = true
+
+[ui.toast]
+delivery = "system"
+
+[ui]
+status_indicators = "symbols"
+
+[theme]
+name = "catppuccin"
+auto_switch = false
