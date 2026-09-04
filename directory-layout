@@ -1,6 +1,7 @@
 #!/bin/sh
 
 mkdir -p ~/src
+mkdir -p ~/src/worktrees
 mkdir -p ~/bin/exe
 mkdir -p ~/bin/venvs
 mkdir -p ~/data

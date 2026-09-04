@@ -16,3 +16,6 @@ status_indicators = "symbols"
 [theme]
 name = "catppuccin"
 auto_switch = false
+
+[worktrees]
+directory = "~/src/worktrees"
