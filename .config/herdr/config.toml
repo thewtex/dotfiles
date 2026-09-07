@@ -13,9 +13,21 @@ delivery = "system"
 [ui]
 status_indicators = "symbols"
 
+agent_panel_sort = "spaces"
 [theme]
 name = "catppuccin"
 auto_switch = false
 
 [worktrees]
 directory = "~/src/worktrees"
+
+[ui.sidebar.spaces]
+rows = [
+  ["state_icon", "workspace"],
+  ["branch", "git_status"],
+  [{ token = "$cpu_ok" }, { token = "$cpu_warn", fg = "#f9e2af" }, { token = "$cpu_hot", fg = "#f38ba8" }],
+  [{ token = "$mem_ok" }, { token = "$mem_warn", fg = "#f9e2af" }, { token = "$mem_hot", fg = "#f38ba8" }],
+  [{ token = "$load_ok" }, { token = "$load_warn", fg = "#f9e2af" }, { token = "$load_hot", fg = "#f38ba8" }],
+  [{ token = "$cpu_history", fg = "#89b4fa" }],
+]
+
