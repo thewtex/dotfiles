@@ -34,7 +34,9 @@ for config in awesome \
   nvim \
   opencode \
   television \
-  kitty
+  kitty \
+  herdr \
+  wezterm
   do
   if test ! -d $config; then
     ln -s ~/.config/dotfiles/.config/$config
