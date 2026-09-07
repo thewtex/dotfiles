@@ -71,14 +71,16 @@ if $TERM == "xterm" || $TERM == "rxvt" || $TERM == "xterm-256color" || $TERM == 
   " The default is 256
   "colorscheme gruvbox
   "let g:onedark_termcolors=16
-  colorscheme onedark
+  "colorscheme onedark
+  colorscheme vscode
   hi SyntasticError   ctermfg=235 ctermbg=218
   hi SyntasticWarning ctermfg=015 ctermbg=062
 else
   let g:onedark_termcolors=16
   "colorscheme desert
 endif
-colorscheme onedark
+"colorscheme onedark
+colorscheme vscode
 
 let g:airline_powerline_fonts = 1
 
