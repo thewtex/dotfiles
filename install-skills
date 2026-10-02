@@ -3,17 +3,14 @@
 skills=(
   "https://github.com/vercel-labs/agent-browser agent-browser"
   "https://github.com/coreyhaines31/marketingskills copywriting"
-  "https://github.com/vercel-labs/skills find-skills"
   "https://github.com/anthropics/skills frontend-design"
   "https://github.com/anthropics/skills mcp-builder"
   "https://github.com/anthropics/skills pdf"
   "https://github.com/coderabbitai/skills code-review"
-  "https://github.com/jeffallan/claude-skills rust-engineer"
   "https://github.com/gfx-rs/wgpu webgpu-specs"
   "https://github.com/cazala/webgpu-skill webgpu"
   "https://github.com/apollographql/skills rust-best-practices"
   "https://github.com/OthmanAdi/planning-with-files planning-with-files"
-  "https://github.com/GoogleChrome/modern-web-guidance modern-web-guidance"
   "https://github.com/cocoindex-io/cocoindex-code ccc"
 )
 
